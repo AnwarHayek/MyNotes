@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTextFiled" customModule="MyNotes" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="wF6-0f-O8w"/>
+                <outlet property="textFiled" destination="Pdk-DK-JMb" id="SHj-82-gCI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pdk-DK-JMb">
+                    <rect key="frame" x="0.0" y="3.5" width="375" height="27.5"/>
+                    <color key="textColor" name="Navy "/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
+                    <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WqN-Cs-Day">
+                    <rect key="frame" x="0.0" y="44" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.80392156862745101" green="0.80392156862745101" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Zmn-pq-G4Z"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WqN-Cs-Day" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9Tc-fc-t06"/>
+                <constraint firstItem="WqN-Cs-Day" firstAttribute="top" secondItem="Pdk-DK-JMb" secondAttribute="bottom" constant="13" id="IY5-cX-w1r"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WqN-Cs-Day" secondAttribute="bottom" id="IkI-2Y-jSN"/>
+                <constraint firstAttribute="trailing" secondItem="WqN-Cs-Day" secondAttribute="trailing" id="Kq8-zq-iVS"/>
+                <constraint firstItem="Pdk-DK-JMb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hdp-Gc-GaA"/>
+                <constraint firstAttribute="trailing" secondItem="Pdk-DK-JMb" secondAttribute="trailing" id="i6x-Ph-sPJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-484.05797101449281" y="-331.13839285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Navy ">
+            <color red="0.13725490196078433" green="0.12549019607843137" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
