@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Medium.ttf">
+            <string>Quicksand-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsTextFiled" customModule="MyNotes" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="HZg-Xr-y3e" id="mSh-p9-uxH"/>
+                <outlet property="textFiled" destination="usY-GL-RFd" id="QpG-nY-YSh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="HZg-Xr-y3e">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usY-GL-RFd">
+                    <rect key="frame" x="0.0" y="12" width="375" height="19"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Msl-a6-aCP">
+                    <rect key="frame" x="0.0" y="44" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="x0K-BF-Cd1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="xZj-4y-FQv"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Msl-a6-aCP" firstAttribute="top" secondItem="usY-GL-RFd" secondAttribute="bottom" constant="13" id="SOq-cO-7Gr"/>
+                <constraint firstItem="Msl-a6-aCP" firstAttribute="leading" secondItem="HZg-Xr-y3e" secondAttribute="leading" id="XWs-8E-2V7"/>
+                <constraint firstAttribute="trailing" secondItem="usY-GL-RFd" secondAttribute="trailing" id="Yec-5D-5Rg"/>
+                <constraint firstItem="usY-GL-RFd" firstAttribute="leading" secondItem="HZg-Xr-y3e" secondAttribute="leading" id="ZgH-01-grt"/>
+                <constraint firstAttribute="trailing" secondItem="Msl-a6-aCP" secondAttribute="trailing" id="dKX-Bj-ToP"/>
+                <constraint firstItem="xZj-4y-FQv" firstAttribute="bottom" secondItem="Msl-a6-aCP" secondAttribute="bottom" id="ive-8H-17z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-501" y="-334"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

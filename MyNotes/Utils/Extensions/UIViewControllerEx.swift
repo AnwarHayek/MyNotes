@@ -51,4 +51,11 @@ extension UIViewController {
     func rightBarButtonItem(action: Selector, image: String, width: Double = 20, height: Double = 20) {
         self.navigationItem.rightBarButtonItem = customBarButtonItem(action: action, image: image, width: width, height: height)
     }
+
+    // MARK: Show ActionSheet
+    func _presentActionSheet(actions: UIAlertAction...) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actions.forEach { alert.addAction($0) }
+        self.present(alert, animated: true, completion: nil)
+    }
 }

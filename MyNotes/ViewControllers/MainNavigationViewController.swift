@@ -20,7 +20,7 @@ class MainNavigationViewController: UINavigationController {
 extension MainNavigationViewController {
 
     func setRoot() {
-        let vc: CategoriesViewController = CategoriesViewController.instantiate(appStoryboard: .Main)
+        let vc: SettingsViewController = SettingsViewController.instantiate(appStoryboard: .Settings)
         vc._rootPush()
     }
 

@@ -61,7 +61,7 @@ extension CategoriesViewController {
 extension CategoriesViewController {
 
     @objc func settingAction() {
-        let vc: NewCategoryViewController = NewCategoryViewController.instantiate(appStoryboard: .Main)
+        let vc: SettingsViewController = SettingsViewController.instantiate(appStoryboard: .Settings)
         vc._push()
     }
 

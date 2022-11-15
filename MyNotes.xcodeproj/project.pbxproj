@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04108B38292375C4000D2876 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04108B37292375C4000D2876 /* Settings.storyboard */; };
+		04108B3C29237632000D2876 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04108B3B29237632000D2876 /* SettingsViewController.swift */; };
+		04108B3F29237642000D2876 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04108B3E29237642000D2876 /* ProfileViewController.swift */; };
+		04108B432923797D000D2876 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04108B412923797D000D2876 /* SettingsCell.swift */; };
+		04108B442923797D000D2876 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04108B422923797D000D2876 /* SettingsCell.xib */; };
+		04108B4729238AEC000D2876 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04108B4629238AEC000D2876 /* Settings.swift */; };
+		048702532924295C004444FA /* SettingsTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048702512924295C004444FA /* SettingsTextFiled.swift */; };
+		048702542924295C004444FA /* SettingsTextFiled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048702522924295C004444FA /* SettingsTextFiled.xib */; };
+		0487025629243608004444FA /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487025529243608004444FA /* UIApplicationEx.swift */; };
 		04919D2D2921855E00CABE34 /* CategoryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04919D2B2921855E00CABE34 /* CategoryName.swift */; };
 		04919D2E2921855E00CABE34 /* CategoryName.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04919D2C2921855E00CABE34 /* CategoryName.xib */; };
 		04919D302921991100CABE34 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04919D2F2921991100CABE34 /* AboutAppViewController.swift */; };
@@ -51,6 +60,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04108B37292375C4000D2876 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		04108B3B29237632000D2876 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		04108B3E29237642000D2876 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		04108B412923797D000D2876 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		04108B422923797D000D2876 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		04108B4629238AEC000D2876 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		048702512924295C004444FA /* SettingsTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextFiled.swift; sourceTree = "<group>"; };
+		048702522924295C004444FA /* SettingsTextFiled.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTextFiled.xib; sourceTree = "<group>"; };
+		0487025529243608004444FA /* UIApplicationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
 		04919D2B2921855E00CABE34 /* CategoryName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryName.swift; sourceTree = "<group>"; };
 		04919D2C2921855E00CABE34 /* CategoryName.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryName.xib; sourceTree = "<group>"; };
 		04919D2F2921991100CABE34 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +128,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04108B3929237616000D2876 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				04108B3D29237639000D2876 /* Profile */,
+				04108B3A29237629000D2876 /* Settings */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		04108B3A29237629000D2876 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				04108B3B29237632000D2876 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		04108B3D29237639000D2876 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				04108B3E29237642000D2876 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		04108B402923795B000D2876 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				04108B412923797D000D2876 /* SettingsCell.swift */,
+				04108B422923797D000D2876 /* SettingsCell.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		04108B4529238A94000D2876 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04108B4629238AEC000D2876 /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0487024F29242938004444FA /* SettingsTextFiled */ = {
+			isa = PBXGroup;
+			children = (
+				048702512924295C004444FA /* SettingsTextFiled.swift */,
+				048702522924295C004444FA /* SettingsTextFiled.xib */,
+			);
+			path = SettingsTextFiled;
+			sourceTree = "<group>";
+		};
 		04919D2A2921852400CABE34 /* Category Name */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +222,7 @@
 				0494BE22291C15D300CC25DE /* Storyboards */,
 				0494BE23291C15DB00CC25DE /* ViewControllers */,
 				0494BE24291C15E300CC25DE /* Utils */,
+				04108B4529238A94000D2876 /* Models */,
 				0494BE21291C152300CC25DE /* SupportingFiles */,
 			);
 			path = MyNotes;
@@ -171,9 +241,10 @@
 		0494BE22291C15D300CC25DE /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				0494BE13291C14F500CC25DE /* Auth.storyboard */,
 				0494BE18291C14F600CC25DE /* LaunchScreen.storyboard */,
+				0494BE13291C14F500CC25DE /* Auth.storyboard */,
 				04B1E049291FFC7E00B9F45C /* Main.storyboard */,
+				04108B37292375C4000D2876 /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -185,6 +256,7 @@
 				0494BE2A291C16E400CC25DE /* MainNavigationViewController.swift */,
 				04B1E04B291FFCAA00B9F45C /* Auth */,
 				04B1E04C291FFCB800B9F45C /* Main */,
+				04108B3929237616000D2876 /* Settings */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -211,6 +283,7 @@
 				04C148EE291E983400E91DC8 /* UITextFieldEx.swift */,
 				04B1E0642920025000B9F45C /* TableViewEx.swift */,
 				04B1E0662920025E00B9F45C /* CollectionViewEx.swift */,
+				0487025529243608004444FA /* UIApplicationEx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -253,6 +326,7 @@
 		0494BE3E291C1CA500CC25DE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0487024F29242938004444FA /* SettingsTextFiled */,
 				0494BE3F291C1CAB00CC25DE /* CustomTextFiled */,
 			);
 			path = View;
@@ -323,6 +397,7 @@
 		04B1E0592920007800B9F45C /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				04108B402923795B000D2876 /* Settings */,
 				04919D2A2921852400CABE34 /* Category Name */,
 				04B1E05E292000BC00B9F45C /* Categories */,
 			);
@@ -374,7 +449,6 @@
 				AC2EFFD82138A5A8510069F1 /* Pods-MyNotes.debug.xcconfig */,
 				DCD4634F6E07F836CCFCD800 /* Pods-MyNotes.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -438,6 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048702542924295C004444FA /* SettingsTextFiled.xib in Resources */,
 				0494BE43291C1CD100CC25DE /* CustomTextFiled.xib in Resources */,
 				04B1E05D292000B500B9F45C /* CategoriesCell.xib in Resources */,
 				04919D2E2921855E00CABE34 /* CategoryName.xib in Resources */,
@@ -447,10 +522,12 @@
 				04F82A3C2920276500A7C907 /* Quicksand-Medium.ttf in Resources */,
 				04C148E5291E740200E91DC8 /* Roboto-Regular.ttf in Resources */,
 				04D6CFFF291EEE1000A6257A /* Quicksand-Bold.ttf in Resources */,
+				04108B442923797D000D2876 /* SettingsCell.xib in Resources */,
 				04C148E7291E740200E91DC8 /* Roboto-Light.ttf in Resources */,
 				0494BE17291C14F600CC25DE /* Assets.xcassets in Resources */,
 				04C148E9291E74B800E91DC8 /* Nunito-Bold.ttf in Resources */,
 				0494BE15291C14F500CC25DE /* Auth.storyboard in Resources */,
+				04108B38292375C4000D2876 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,17 +592,23 @@
 				04B1E04E291FFD1200B9F45C /* CategoriesViewController.swift in Sources */,
 				0494BE37291C1B3B00CC25DE /* UIViewEx.swift in Sources */,
 				04919D302921991100CABE34 /* AboutAppViewController.swift in Sources */,
+				048702532924295C004444FA /* SettingsTextFiled.swift in Sources */,
 				04C148ED291E8DC700E91DC8 /* ContainerView.swift in Sources */,
+				04108B3F29237642000D2876 /* ProfileViewController.swift in Sources */,
+				04108B432923797D000D2876 /* SettingsCell.swift in Sources */,
+				0487025629243608004444FA /* UIApplicationEx.swift in Sources */,
 				0494BE29291C167B00CC25DE /* UIViewControllerEx.swift in Sources */,
 				04C148EB291E8B7600E91DC8 /* Strings.swift in Sources */,
 				0494BE2E291C175A00CC25DE /* SignInViewController.swift in Sources */,
 				0494BE3B291C1C1300CC25DE /* StringEx.swift in Sources */,
 				04B1E061292000F100B9F45C /* GeneralTableView.swift in Sources */,
 				04B1E052291FFD3300B9F45C /* CategoryNameViewController.swift in Sources */,
+				04108B4729238AEC000D2876 /* Settings.swift in Sources */,
 				04B1E05C292000B500B9F45C /* CategoriesCell.swift in Sources */,
 				0494BE35291C1AFF00CC25DE /* CustomButton.swift in Sources */,
 				0494BE0E291C14F500CC25DE /* AppDelegate.swift in Sources */,
 				04B1E0652920025000B9F45C /* TableViewEx.swift in Sources */,
+				04108B3C29237632000D2876 /* SettingsViewController.swift in Sources */,
 				04919D2D2921855E00CABE34 /* CategoryName.swift in Sources */,
 				0494BE27291C162800CC25DE /* GlobalConstants.swift in Sources */,
 				0494BE39291C1BE600CC25DE /* UIColorEx.swift in Sources */,

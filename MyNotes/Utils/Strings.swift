@@ -41,3 +41,17 @@ let DESCRIPTION_TITLE = "Description"._localize
 // MARK: - About App
 let ABOUT_APP = "About App"._localize
 
+// MARK: - Settings
+let SETTINGS_TITLE = "Settings"._localize
+// MARK: - Profile
+let CATEGORYS_TITLE = "Categorys"._localize
+let PROFILE_TITLE = "Profile"._localize
+let DONE_NOTES_TITLE = "Done Notes"._localize
+let WAITING_NOTES_TITLE = "Waiting Notes"._localize
+let CANCEL_TITLE = "Cancel"._localize
+let ARABIC_TITLE = "Arabic"._localize
+let ENGLISH_TITLE = "English"._localize
+
+
+
+
