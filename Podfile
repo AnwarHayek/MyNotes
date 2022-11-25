@@ -6,6 +6,14 @@ target 'MyNotes' do
   use_frameworks!
 
   # Pods for MyNotes
-    pod 'IQKeyboardManagerSwift', '6.3.0'
+    pod 'MagicalRecord'
+    pod 'ProgressHUD'
+    
+  # Pods for Firebase
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Firestore'
+    pod 'Firebase/Storage'
+    pod 'Firebase/Database'
 
 end

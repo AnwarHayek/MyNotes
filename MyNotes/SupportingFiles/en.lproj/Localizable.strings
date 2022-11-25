@@ -1,0 +1,70 @@
+/* 
+  Localizable.strings
+  MyNotes
+
+  Created by Anwar Alhayek on 22/11/2022.
+  
+*/
+
+// MARK: - SignIn
+"Sign In" = "Sign In";
+"Login to start using app," = "Login to start using app,";
+"Don’t have an account?" = "Don’t have an account?";
+"Email" = "Email";
+"Password" = "Password";
+"Login" = "Login";
+
+// MARK: - SignUp
+"Sign Up" = "Sign Up";
+"Create an account" = "Create an account";
+"Phone" = "Phone";
+"First name" = "First name";
+"Last name" = "Last name";
+
+// MARK: - Categories
+"Categories" = "Categories";
+
+// MARK: - New Category
+"New Category" = "New Category";
+"Create category" = "Create category";
+"Short Description" = "Short Description";
+"Category" = "Category";
+"Save" = "Save";
+"Category Name" = "Category Name";
+
+// MARK: - New Note
+"New Note" = "New Note";
+"Create note" = "Create note";
+"Note Title" = "Note Title";
+"Description" = "Description";
+
+// MARK: - About App
+"About App" = "About App";
+
+// MARK: - Settings
+"Settings" = "Settings";
+"Language" = "Language";
+"Selected language" = "Selected language";
+"Profile" = "Profile";
+"Update your data" = "Update your data…";
+"About App" = "About App";
+"What is notes app?" = "What is notes app?";
+"Logout" = "Logout";
+"Waiting your return" = "Waiting your return…";
+"edit Language" = "Are you sure to change App language? The application will turn off. please relunach it again.";
+
+// MARK: - Profile
+"Categorys" = "Categorys";
+"Profile" = "Profile";
+"Done Notes" = "Done Notes";
+"Waiting Notes" = "Waiting Notes";
+"Cancel" = "Cancel";
+"Arabic" = "العربية";
+"English" = "English";
+
+// MARK: - General
+"alert" = "Alert";
+"Please enter all data" = "Please enter all data";
+"Server error" = "Server error";
+"Do you really want to logout?" = "Do you really want to logout?";
+"Ok" = "Ok";

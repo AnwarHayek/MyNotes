@@ -30,6 +30,7 @@ let NEW_CATEGORY_TITLE = "New Category"._localize
 let CREATE_CATEGORY_TITLE = "Create category"._localize
 let SHORT_DESCRIPTION_TITLE = "Short Description"._localize
 let CATEGORY_TITLE = "Category"._localize
+let CATEGORY_NAME_TITLE = "Category Name"._localize
 let SAVE_TITLE = "Save"._localize
 
 // MARK: - New Note
@@ -43,15 +44,27 @@ let ABOUT_APP = "About App"._localize
 
 // MARK: - Settings
 let SETTINGS_TITLE = "Settings"._localize
+let LANGUAGE_TITLE = "Language"._localize
+let SELECTED_LANGUDE_TITLE = "Selected language"._localize
+let PROFILE_TITLE = "Profile"._localize
+let UPDATE_DATA_TITLE = "Update your data"._localize
+let APOUTAPP_TITLE = "About App"._localize
+let WHAT_IS_TITLE = "What is notes app?"._localize
+let LOGOUT_TITLE = "Logout"._localize
+let WAITING_TITLE = "Waiting your return"._localize
+let EDITE_LANGUGE_TITLE = "edit Language"._localize
+
 // MARK: - Profile
 let CATEGORYS_TITLE = "Categorys"._localize
-let PROFILE_TITLE = "Profile"._localize
 let DONE_NOTES_TITLE = "Done Notes"._localize
 let WAITING_NOTES_TITLE = "Waiting Notes"._localize
 let CANCEL_TITLE = "Cancel"._localize
 let ARABIC_TITLE = "Arabic"._localize
 let ENGLISH_TITLE = "English"._localize
 
-
-
-
+// MARK: - General
+let ALERT_TITLE = "Alert"._localize
+let EMPTY_FIELDS_MESSAGE = "Please enter all data"._localize
+let SERVER_ERROR_MESSAGE = "Server error"._localize
+let LOGOUT_MESSAGE = "Do you really want to logout?"._localize
+let OK_TITLE = "Ok"._localize

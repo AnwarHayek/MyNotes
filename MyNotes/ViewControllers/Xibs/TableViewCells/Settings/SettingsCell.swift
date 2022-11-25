@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsCell: GeneralTableViewCell {
 
+    @IBOutlet weak var imgArrow: UIImageView!
+
     @IBOutlet weak var rightView: UIView!
     @IBOutlet weak var leftView: UIView!
 
@@ -22,6 +24,7 @@ class SettingsCell: GeneralTableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.spaceBetweenCell = 10
+        self.imgArrow.flipInRTL()
     }
 
     override func configerCell() {
@@ -47,8 +50,10 @@ class SettingsCell: GeneralTableViewCell {
     }
 
     func cellAction(index: Int) {
+        guard let parent = _topVC as? SettingsViewController else { return }
+
         if index == 0 {
-            self.showActionSheet()
+            parent.showActionSheet()
         } else if index == 1 {
             let vc: ProfileViewController = ProfileViewController.instantiate(appStoryboard: .Settings)
             vc._push()
@@ -56,23 +61,7 @@ class SettingsCell: GeneralTableViewCell {
             let vc: AboutAppViewController = AboutAppViewController.instantiate(appStoryboard: .Settings)
             vc._push()
         } else if index == 3 {
-            let vc: SignInViewController = SignInViewController.instantiate(appStoryboard: .Auth)
-            vc._rootPush()
-        }
-    }
-
-    func showActionSheet() {
-        let arabic = UIAlertAction(title: ARABIC_TITLE, style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in })
-
-        let english = UIAlertAction(title: ENGLISH_TITLE, style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in })
-
-        let cancel = UIAlertAction(title: CANCEL_TITLE, style: .cancel, handler: {
-            (alert: UIAlertAction!) -> Void in })
-
-        if let parent = _topVC as? SettingsViewController {
-            parent._presentActionSheet(actions: arabic, english, cancel)
+            parent.signOut()
         }
     }
 }

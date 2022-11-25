@@ -271,10 +271,10 @@
             </objects>
             <point key="canvasLocation" x="1057" y="630"/>
         </scene>
-        <!--Category Name View Controller-->
+        <!--Notes View Controller-->
         <scene sceneID="lr8-yv-1mu">
             <objects>
-                <viewController storyboardIdentifier="CategoryNameViewController" id="EHp-CT-iG3" customClass="CategoryNameViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesViewController" id="EHp-CT-iG3" customClass="NotesViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FwO-t1-G3l">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,7 +295,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="tableView" destination="Yx9-Ev-E5G" id="CKB-Cr-tSw"/>
+                        <outlet property="tableView" destination="Yx9-Ev-E5G" id="3IO-qy-xDr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="quE-Dd-Ibh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -33,15 +33,14 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func btnSignUp(_ sender: Any) {
-        let vc: CategoriesViewController = CategoriesViewController.instantiate(appStoryboard: .Main)
-        vc._push()
+        self.signUp()
     }
 }
 
 extension SignUpViewController {
 
     func setupView() {
-
+        self.txtPassword.isSecureTextEntry = true
     }
 
     func localized() {
@@ -65,3 +64,20 @@ extension SignUpViewController {
 
 }
 
+extension SignUpViewController {
+
+    func signUp() {
+        let vc: CategoriesViewController = CategoriesViewController.instantiate(appStoryboard: .Main)
+        let email = self.txtEmail.text
+        let password = self.txtPassword.text
+        let firstName = self.txtFirstName.text
+        let lastName = self.txtLastName.text
+        let phone = self.txtPhone.text
+
+        let user = User.init(firsName: firstName, lastName: lastName, email: email, phone: phone, password: password)
+        let userController = UserController()
+        userController.signUp(user: user) { user in
+            vc._rootPush()
+        }
+    }
+}

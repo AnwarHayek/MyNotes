@@ -20,8 +20,14 @@ class MainNavigationViewController: UINavigationController {
 extension MainNavigationViewController {
 
     func setRoot() {
-        let vc: SettingsViewController = SettingsViewController.instantiate(appStoryboard: .Settings)
-        vc._rootPush()
+        let vc1: SignInViewController = SignInViewController.instantiate(appStoryboard: .Auth)
+        let vc2: CategoriesViewController = CategoriesViewController.instantiate(appStoryboard: .Main)
+
+        if UserData.uid?.isEmpty == true {
+            vc1._rootPush()
+            return
+        }
+        vc2._rootPush()
     }
 
     func setUpNavigation() {

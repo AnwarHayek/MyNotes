@@ -15,9 +15,16 @@ let QUICKSAND_BOLD22 = UIFont.init(name: "Quicksand-Bold", size: 22) ?? SYSTEM_B
 
 let SYSTEM_LIGHT_FONT22 = UIFont.systemFont(ofSize: 22, weight: .light)
 let SYSTEM_BOLD_FONT22 = UIFont.systemFont(ofSize: 22, weight: .bold)
+
 // MARK: - Color
-//let BLACK_AND_WHITE = "BlackAndWhite"._colorNamed ?? UIColor.black
 let NAVY_COLOR = "#23203F"._color
+
+// MARK: - Collection names in firestore Database
+let USERS = "Users"
+
+// MARK: - UserDefult
+let USER_KEY = "USER"
+let ID_KEY = "ID"
 
 // MARK: - Enum
 enum AppStoryboard: String {

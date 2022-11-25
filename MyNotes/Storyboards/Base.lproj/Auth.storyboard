@@ -111,7 +111,7 @@
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="26" bottom="0.0" trailing="26"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uqv-zd-lBE">
-                                        <rect key="frame" x="0.0" y="434.33333333333331" width="375" height="147.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="434.33333333333331" width="375" height="229.66666666666669"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIK-pt-nul" customClass="CustomButton" customModule="MyNotes" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="30" width="315" height="53"/>
@@ -126,19 +126,19 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uYw-66-rPl">
-                                                <rect key="frame" x="30" y="93.000000000000057" width="315" height="54.333333333333343"/>
+                                                <rect key="frame" x="30" y="93.000000000000043" width="315" height="136.66666666666663"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="T0r-Om-ALl">
-                                                        <rect key="frame" x="109" y="0.0" width="97.333333333333314" height="54.333333333333336"/>
+                                                        <rect key="frame" x="108.33333333333334" y="0.0" width="98.666666666666657" height="136.66666666666666"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qso-ke-ozT">
-                                                                <rect key="frame" x="0.0" y="17" width="41.333333333333336" height="20.333333333333329"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <rect key="frame" x="0.0" y="57.666666666666636" width="42.666666666666664" height="21.333333333333336"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="18"/>
+                                                                <color key="textColor" red="0.57647058823529407" green="0.56862745098039214" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-Ao-aGv">
-                                                                <rect key="frame" x="43.333333333333343" y="10.333333333333258" width="54" height="34"/>
+                                                                <rect key="frame" x="44.666666666666657" y="51.333333333333258" width="54" height="34"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Button">
@@ -156,7 +156,7 @@
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="30" leading="30" bottom="0.0" trailing="30"/>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zui-QL-21s">
-                                        <rect key="frame" x="0.0" y="581.66666666666663" width="375" height="230.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="664" width="375" height="148"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>

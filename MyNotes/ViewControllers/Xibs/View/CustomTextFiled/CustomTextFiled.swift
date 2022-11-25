@@ -63,5 +63,11 @@ class CustomTextFiled: UIView {
             return "placeholder"
         }
     }
+
+    var text: String? {
+        get {
+            return self.textFiled.text
+        }
+    }
 }
 

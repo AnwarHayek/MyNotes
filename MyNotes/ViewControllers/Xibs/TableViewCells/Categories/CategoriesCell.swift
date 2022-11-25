@@ -19,7 +19,7 @@ class CategoriesCell: GeneralTableViewCell {
     override func configerCell() { }
 
     override func didselect(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc: CategoryNameViewController = CategoryNameViewController.instantiate(appStoryboard: .Main)
+        let vc: NotesViewController = NotesViewController.instantiate(appStoryboard: .Main)
         vc._push()
     }
 }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
 
@@ -33,15 +35,15 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func btnSignUp(_ sender: Any) {
-        debugPrint("\(#function)")
         let vc: SignUpViewController = SignUpViewController.instantiate(appStoryboard: .Auth)
         vc._push()
     }
 
     @IBAction func btnSignIn(_ sender: Any) {
-        debugPrint("\(#function)")
+        self.signUp()
     }
 }
+
 
 extension SignInViewController {
 
@@ -69,3 +71,25 @@ extension SignInViewController {
 
 }
 
+extension SignInViewController {
+
+    func signUp() {
+        let vc: CategoriesViewController = CategoriesViewController.instantiate(appStoryboard: .Main)
+        let email = self.txtEmail.text
+        let password = self.txtPassword.text
+
+        let user = User.init(email: email, password: password)
+        let userController = UserController()
+        userController.signInByEmail(user: user) { user in
+            vc._rootPush()
+        }
+    }
+}
+
+
+
+//        if Reachability.isConnectedToNetwork() {
+//            print("Internet Connection Available!")
+//        } else {
+//            print("Internet Connection not Available!")
+//        }

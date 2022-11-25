@@ -3,12 +3,11 @@
     <entity name="TCategorie" representedClassName="TCategorie" syncable="YES" codeGenerationType="class">
         <attribute name="categorie_description" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="note" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TNote"/>
     </entity>
     <entity name="TNote" representedClassName="TNote" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="note_description" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>

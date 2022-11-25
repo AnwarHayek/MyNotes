@@ -15,7 +15,6 @@ class NewCategoryViewController: UIViewController {
     @IBOutlet weak var txtCategory: CustomTextFiled!
     @IBOutlet weak var txtShortDescription: CustomTextFiled!
 
-
     @IBOutlet weak var btnSave: CustomButton!
 
     override func viewDidLoad() {
@@ -41,7 +40,7 @@ extension NewCategoryViewController {
         self.lblNewCategory.text = NEW_CATEGORY_TITLE
         self.lblCreateCategory.text = CREATE_CATEGORY_TITLE
         self.btnSave.title = SAVE_TITLE
-        self.txtCategory.placeholder = CATEGORY_TITLE
+        self.txtCategory.placeholder = CATEGORY_NAME_TITLE
         self.txtShortDescription.placeholder = SHORT_DESCRIPTION_TITLE
     }
 

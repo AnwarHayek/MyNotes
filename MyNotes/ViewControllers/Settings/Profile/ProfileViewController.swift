@@ -21,6 +21,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblCharacter: UILabel!
 
+    @IBOutlet weak var txtEmail: SettingsTextFiled!
+    @IBOutlet weak var txtPhone: SettingsTextFiled!
+    @IBOutlet weak var txtLastName: SettingsTextFiled!
+    @IBOutlet weak var txtFirstName: SettingsTextFiled!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -40,7 +45,14 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController {
 
     func setupView() {
-
+        self.lblName.text = "\(UserData.firstName + " " + UserData.lastName)"
+        self.lblEmail.text = UserData.email
+        self.lblCharacter.text = "\(UserData.firstName.first ?? " ")"
+        
+        self.txtFirstName.textFiled.text = UserData.firstName
+        self.txtLastName.textFiled.text = UserData.lastName
+        self.txtPhone.textFiled.text = UserData.phone
+        self.txtEmail.textFiled.text = UserData.email
     }
 
     func localized() {
