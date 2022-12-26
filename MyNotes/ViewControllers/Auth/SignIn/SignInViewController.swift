@@ -80,7 +80,7 @@ extension SignInViewController {
 
         let user = User.init(email: email, password: password)
         let userController = UserController()
-        userController.signInByEmail(user: user) { user in
+        userController.signInByEmail(user: user) {
             vc._rootPush()
         }
     }
@@ -88,8 +88,3 @@ extension SignInViewController {
 
 
 
-//        if Reachability.isConnectedToNetwork() {
-//            print("Internet Connection Available!")
-//        } else {
-//            print("Internet Connection not Available!")
-//        }

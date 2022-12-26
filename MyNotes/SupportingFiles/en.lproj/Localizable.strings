@@ -31,12 +31,15 @@
 "Category" = "Category";
 "Save" = "Save";
 "Category Name" = "Category Name";
+"Update" = "Update";
+"Update Category" = "Update Category";
 
 // MARK: - New Note
 "New Note" = "New Note";
 "Create note" = "Create note";
 "Note Title" = "Note Title";
 "Description" = "Description";
+"Update Note" = "Update Note";
 
 // MARK: - About App
 "About App" = "About App";

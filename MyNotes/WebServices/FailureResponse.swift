@@ -12,9 +12,6 @@ class FailureResponse {
     static let shared = FailureResponse()
 
     func showError(error: Error) {
-
         AppDelegate.shared?.rootNavigationController?._showErrorAlert(message: error.localizedDescription)
-
     }
-
 }

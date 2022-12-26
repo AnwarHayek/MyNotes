@@ -11,23 +11,26 @@ class CategoriesViewController: UIViewController {
 
     @IBOutlet weak var tableView: GeneralTableView!
 
+    var categories: [Any] = []
+
+    let categoriesController = CategoriesController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         localized()
         setupData()
-        fetchData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        fetchData()
     }
 
     @IBAction func btnNewCategory(_ sender: Any) {
         let vc: NewCategoryViewController = NewCategoryViewController.instantiate(appStoryboard: .Main)
-//        vc._push()
+        vc._push()
     }
-
 }
 
 extension CategoriesViewController {
@@ -39,8 +42,6 @@ extension CategoriesViewController {
         self.tableView._registerCell = CategoriesCell.self
         self.tableView.cellIdentifier = "CategoriesCell"
         self.tableView.cellHeight = 70
-        let array = [",", ""]
-        self.tableView.object = array
         self.tableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 0, right: 0)
     }
 
@@ -53,9 +54,21 @@ extension CategoriesViewController {
     }
 
     func fetchData() {
+        self.categories.removeAll()
+        categoriesController.getCategory { categories in
+            if categories.count == 0 {
+                let cc = TCategories.mr_findAll() as? [TCategories] ?? []
+                self.categories = cc
+                self.tableView.object = self.categories
+                self.tableView.reloadData()
+                return
+            }
 
+            self.categories = categories
+            self.tableView.object = self.categories
+            self.tableView.reloadData()
+        }
     }
-
 }
 
 extension CategoriesViewController {
@@ -65,4 +78,12 @@ extension CategoriesViewController {
         vc._push()
     }
 
+    func deleteCategory(category: Category) {
+        self._showAlert(title: ALERT_TITLE, message: CONFIRMATION_CATEGORYS_MESSAGE, buttonAction1: {
+            self.categoriesController.deleteCategory(category: category) {
+                self.fetchData()
+            }
+        })
+    }
 }
+

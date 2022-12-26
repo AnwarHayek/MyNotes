@@ -8,6 +8,7 @@ target 'MyNotes' do
   # Pods for MyNotes
     pod 'MagicalRecord'
     pod 'ProgressHUD'
+    pod 'IQKeyboardManagerSwift'
     
   # Pods for Firebase
     pod 'Firebase/Analytics'

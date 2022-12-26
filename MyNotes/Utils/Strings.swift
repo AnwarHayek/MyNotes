@@ -28,13 +28,16 @@ let CATEGORIES_TITLE = "Categories"._localize
 // MARK: - New Category
 let NEW_CATEGORY_TITLE = "New Category"._localize
 let CREATE_CATEGORY_TITLE = "Create category"._localize
+let UPDATE_CATEGORY_TITLE = "Update Category"._localize
 let SHORT_DESCRIPTION_TITLE = "Short Description"._localize
 let CATEGORY_TITLE = "Category"._localize
 let CATEGORY_NAME_TITLE = "Category Name"._localize
 let SAVE_TITLE = "Save"._localize
+let UPDATE_ITLE = "Update"._localize
 
 // MARK: - New Note
 let NEW_NOTE_TITLE = "New Note"._localize
+let UPDATE_NOTE_TITLE = "Update Note"._localize
 let CREATE_NOTE_TITLE = "Create note"._localize
 let NOTE_TITLE_TITLE = "Note Title"._localize
 let DESCRIPTION_TITLE = "Description"._localize
@@ -64,7 +67,17 @@ let ENGLISH_TITLE = "English"._localize
 
 // MARK: - General
 let ALERT_TITLE = "Alert"._localize
+let CONFIRMATION_CATEGORYS_MESSAGE = "Are you sure you want to delete this category?"._localize
+let CONFIRMATION_NOTE_MESSAGE = "Are you sure you want to delete this note?"._localize
 let EMPTY_FIELDS_MESSAGE = "Please enter all data"._localize
+let INTERNET_NOT_AVAILABLE_MESSAGE = "Internet Connection not Available!"._localize
 let SERVER_ERROR_MESSAGE = "Server error"._localize
 let LOGOUT_MESSAGE = "Do you really want to logout?"._localize
 let OK_TITLE = "Ok"._localize
+let SUCCESS_TITLE = "Success!"._localize
+let SUCCESS_ADD_CATEGORYS_MESSAGE = "The Category has been added successfully"._localize
+let SUCCESS_ADD_NOTE_MESSAGE = "The Note has been added successfully"._localize
+let SUCCESS_UPDATE_CATEGORYS_MESSAGE = "The category has been modified successfully"._localize
+let SUCCESS_UPDATE_NOTE_MESSAGE = "The note has been modified successfully"._localize
+
+

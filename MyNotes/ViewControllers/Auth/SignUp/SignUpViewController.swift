@@ -76,7 +76,7 @@ extension SignUpViewController {
 
         let user = User.init(firsName: firstName, lastName: lastName, email: email, phone: phone, password: password)
         let userController = UserController()
-        userController.signUp(user: user) { user in
+        userController.signUp(user: user) {
             vc._rootPush()
         }
     }

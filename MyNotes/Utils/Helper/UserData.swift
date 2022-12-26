@@ -9,7 +9,8 @@ import Foundation
 
 class UserData {
 
-    static func saveUser(user: User) {
+    static func saveUser(user: User?) {
+        guard let user = user else { return }
         let data = try? JSONSerialization.data(withJSONObject: user.getDictionary(), options: .fragmentsAllowed)
         UserDefaults.standard.setValue(data, forKey: USER_KEY)
         UserDefaults.standard.set(user.uid, forKey: ID_KEY)
@@ -78,6 +79,30 @@ class UserData {
             loadUser()?.password = newValue
         } get {
             return loadUser()?.password ?? ""
+        }
+    }
+
+    static var categories: Int {
+        set {
+            loadUser()?.categories = newValue
+        } get {
+            return loadUser()?.categories ?? 0
+        }
+    }
+
+    static var waitingNotes: Int {
+        set {
+            loadUser()?.waitingNotes = newValue
+        } get {
+            return loadUser()?.waitingNotes ?? 0
+        }
+    }
+
+    static var doneNotes: Int {
+        set {
+            loadUser()?.doneNotes = newValue
+        } get {
+            return loadUser()?.doneNotes ?? 0
         }
     }
 }

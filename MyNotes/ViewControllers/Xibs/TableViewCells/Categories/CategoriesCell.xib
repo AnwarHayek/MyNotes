@@ -61,7 +61,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UEC-fQ-iuZ">
                                                 <rect key="frame" x="58" y="0.0" width="33.666666666666657" height="48"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CMo-gJ-MRJ">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="CMo-gJ-MRJ">
                                                         <rect key="frame" x="0.0" y="7.6666666666666643" width="33.666666666666664" height="32.666666666666664"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5L-y8-cLH">
@@ -71,7 +71,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7za-v6-X3y">
-                                                                <rect key="frame" x="1.3333333333333268" y="16.333333333333336" width="31.333333333333329" height="16.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="16.333333333333336" width="31.333333333333332" height="16.333333333333336"/>
                                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="12"/>
                                                                 <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -86,6 +86,9 @@
                                         <rect key="frame" x="308.66666666666669" y="34.666666666666664" width="9.3333333333333144" height="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="ic_Delete"/>
+                                        <connections>
+                                            <action selector="btnDelete:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tBI-wC-dfw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -97,6 +100,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="ic_Edite"/>
+                                <connections>
+                                    <action selector="btnEdit:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7iQ-a7-Cpd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -138,6 +144,11 @@
                 </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblCategoryName" destination="H5L-y8-cLH" id="Fom-JO-tPa"/>
+                <outlet property="lblCharacter" destination="OFl-GZ-OTy" id="bXs-YF-xob"/>
+                <outlet property="lblShortDescription" destination="7za-v6-X3y" id="12O-wd-F7m"/>
+            </connections>
             <point key="canvasLocation" x="165.38461538461539" y="-16.706161137440759"/>
         </tableViewCell>
     </objects>

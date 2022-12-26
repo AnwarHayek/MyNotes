@@ -38,7 +38,7 @@
         <scene sceneID="Nwg-ch-5fa">
             <objects>
                 <viewController storyboardIdentifier="SignInViewController" id="49Q-F5-ZG8" customClass="SignInViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8as-GX-OpP">
+                    <view key="view" contentMode="scaleToFill" id="8as-GX-OpP" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -200,7 +200,7 @@
         <scene sceneID="Gaf-tW-isY">
             <objects>
                 <viewController storyboardIdentifier="SignUpViewController" id="uYo-Bq-yoN" customClass="SignUpViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qgf-Wt-NV3">
+                    <view key="view" contentMode="scaleToFill" id="Qgf-Wt-NV3" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

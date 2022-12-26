@@ -21,10 +21,19 @@ let NAVY_COLOR = "#23203F"._color
 
 // MARK: - Collection names in firestore Database
 let USERS = "Users"
+let CATEGORIES = "Categories"
 
 // MARK: - UserDefult
 let USER_KEY = "USER"
 let ID_KEY = "ID"
+
+// MARK: - Error
+let EMPTY_FIELDS_ERROR = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: EMPTY_FIELDS_MESSAGE])
+let INTERNET_NOT_AVAILABLE_ERROR = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: INTERNET_NOT_AVAILABLE_MESSAGE])
+
+// MARK: - Format
+let DATE_FORMAT = "yyyy-MM-dd HH:mm:ss"
+let TIME_FORMAT = "h:mm a"
 
 // MARK: - Enum
 enum AppStoryboard: String {
@@ -32,3 +41,14 @@ enum AppStoryboard: String {
     case Main = "Main"
     case Settings = "Settings"
 }
+
+// MARK: - Function
+func checkInternet() -> Bool {
+    if Reachability.isConnectedToNetwork() == false {
+        FailureResponse.shared.showError(error: INTERNET_NOT_AVAILABLE_ERROR)
+        return false
+    }
+    return true
+}
+
+

@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+import MagicalRecord
 
 class UserController {
 
@@ -16,6 +17,7 @@ class UserController {
     private let db = Firestore.firestore()
     private var usersFireStoreReference: CollectionReference?
 
+    typealias Handler = (() -> Void)?
     typealias ResultHandler = ((_ user: User?) -> Void)?
     typealias FailureHandler = ((_ errorMessage: String?) -> Void)?
 
@@ -24,7 +26,7 @@ class UserController {
     }
 
     // MARK: SignUp By Email
-    func signUp(user: User, result: ResultHandler) {
+    func signUp(user: User, result: Handler) {
         if let _email = user.email, let _password = user.password, user.firsName != "", user.lastName != "", user.phone != "" {
 
             Helper.showLoader(isLoading: true)
@@ -38,12 +40,11 @@ class UserController {
                 user.uid = userResult?.user.uid
                 self.setUser(user: user)
                 UserData.saveUser(user: user)
-                result?(user)
+                result?()
             }
             return
         }
-        let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: EMPTY_FIELDS_MESSAGE])
-        FailureResponse.shared.showError(error: error)
+        FailureResponse.shared.showError(error: EMPTY_FIELDS_ERROR)
     }
 
     // MARK: User data Registration on Firestore
@@ -61,7 +62,7 @@ class UserController {
     }
 
     // MARK: Sign In By Email
-    func signInByEmail(user: User, result: ResultHandler) {
+    func signInByEmail(user: User, result: Handler) {
         guard let _email = user.email, let _password = user.password else { return }
         Helper.showLoader(isLoading: true)
 
@@ -76,7 +77,7 @@ class UserController {
             self.getUserData(uid: uid) { user in
                 if let _user = user {
                     UserData.saveUser(user: _user)
-                    result?(_user)
+                    result?()
                     return
                 }
                 let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: SERVER_ERROR_MESSAGE])
@@ -107,6 +108,8 @@ class UserController {
         do {
             try firebaseAuth.signOut()
             UserData.clearUserDefaults()
+            TNote.mr_truncateAll()
+            TCategories.mr_truncateAll()
             failure?(nil)
         } catch let error as NSError {
             FailureResponse.shared.showError(error: error)

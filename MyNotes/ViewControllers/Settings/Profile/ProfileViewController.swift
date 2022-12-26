@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var txtPhone: SettingsTextFiled!
     @IBOutlet weak var txtLastName: SettingsTextFiled!
     @IBOutlet weak var txtFirstName: SettingsTextFiled!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -48,7 +48,10 @@ extension ProfileViewController {
         self.lblName.text = "\(UserData.firstName + " " + UserData.lastName)"
         self.lblEmail.text = UserData.email
         self.lblCharacter.text = "\(UserData.firstName.first ?? " ")"
-        
+        self.lblCategoriesNumber.text = "\(UserData.categories)"
+        self.lblWaitingNotesNumber.text = "\(UserData.waitingNotes)"
+        self.lblDoneNotesNumber.text = "\(UserData.doneNotes)"
+
         self.txtFirstName.textFiled.text = UserData.firstName
         self.txtLastName.textFiled.text = UserData.lastName
         self.txtPhone.textFiled.text = UserData.phone

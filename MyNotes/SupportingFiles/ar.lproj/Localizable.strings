@@ -31,11 +31,15 @@
 "Category" = "فئة";
 "Save" = "حفظ";
 "Category Name" = "إسم الفئة";
+"Update" = "تحديث";
+"Update Category" = "تعديل الفئة";
+
 // MARK: - New Note
 "New Note" = "مذكرة جديدة";
 "Create note" = "إنشاء مذكرة";
 "Note Title" = "عنوان المذكرة";
 "Description" = "الوصف";
+"Update Note" = "تعديل المذكرة";
 
 // MARK: - About App
 "About App" = "عن التطبيق";

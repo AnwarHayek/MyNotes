@@ -12,7 +12,7 @@ class GeneralTableView: UITableView {
 
     var cellIdentifier: String?
 
-    var cellHeight: CGFloat = 0
+    var cellHeight: CGFloat?
 
     var object: [Any] = []
 
@@ -51,11 +51,11 @@ extension GeneralTableView: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellHeight
+        return cellHeight ?? UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        On ViewController
+        //On ViewController
         self.selectHandler?(indexPath)
 
         //On Cell
