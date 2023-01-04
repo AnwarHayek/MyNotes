@@ -30,16 +30,15 @@ class SettingsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.lblName.text = "\(UserData.firstName + " " + UserData.lastName)"
+        self.lblCharacter.text = "\(UserData.firstName.first ?? " ")"
     }
-
 }
 
 extension SettingsViewController {
 
     func setupView() {
-        self.lblName.text = "\(UserData.firstName + " " + UserData.lastName)"
         self.lblEmail.text = UserData.email
-        self.lblCharacter.text = "\(UserData.firstName.first ?? " ")"
         //TableView
         self.tableView._registerCell = SettingsCell.self
         self.tableView.cellIdentifier = "SettingsCell"
@@ -90,7 +89,7 @@ extension SettingsViewController {
         let userController = UserController()
 
         self._showAlert(title: ALERT_TITLE, message: LOGOUT_MESSAGE, buttonAction1: {
-            userController.signOut { error in
+            userController.signOut {
                 vc._rootPush()
             }
         })

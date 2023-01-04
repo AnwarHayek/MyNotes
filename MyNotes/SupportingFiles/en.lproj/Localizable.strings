@@ -65,9 +65,19 @@
 "Arabic" = "العربية";
 "English" = "English";
 
+// MARK: - Update Password
+"Update Password" = "Update Password";
+"Old Password" = "Old Password";
+"New Password" = "New Password";
+"Confirm Password" = "Confirm Password";
+
 // MARK: - General
 "alert" = "Alert";
 "Please enter all data" = "Please enter all data";
 "Server error" = "Server error";
 "Do you really want to logout?" = "Do you really want to logout?";
 "Ok" = "Ok";
+"Password changed successfully" = "Password changed successfully";
+"The password is incorrect" = "The password is incorrect";
+"Please make sure your passwords match" = "Please make sure your passwords match";
+"The data has been modified successfully" = "The data has been modified successfully";

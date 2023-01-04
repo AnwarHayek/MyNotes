@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var imgArrow: UIImageView!
+
     @IBOutlet weak var btnSave: UIButton!
 
     @IBOutlet weak var lblCategories: UILabel!
@@ -21,7 +23,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblCharacter: UILabel!
 
-    @IBOutlet weak var txtEmail: SettingsTextFiled!
+    @IBOutlet weak var txtPassword: SettingsTextFiled!
     @IBOutlet weak var txtPhone: SettingsTextFiled!
     @IBOutlet weak var txtLastName: SettingsTextFiled!
     @IBOutlet weak var txtFirstName: SettingsTextFiled!
@@ -39,6 +41,7 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func btnSave(_ sender: Any) {
+        self.updateUserData()
     }
 }
 
@@ -55,7 +58,11 @@ extension ProfileViewController {
         self.txtFirstName.textFiled.text = UserData.firstName
         self.txtLastName.textFiled.text = UserData.lastName
         self.txtPhone.textFiled.text = UserData.phone
-        self.txtEmail.textFiled.text = UserData.email
+        self.txtPassword.textFiled.isUserInteractionEnabled = false
+
+        self.txtPassword.addTapGuesture(target: self, action: #selector(self.updatePassword))
+        self.imgArrow.flipInRTL()
+
     }
 
     func localized() {
@@ -64,6 +71,8 @@ extension ProfileViewController {
         self.lblCategories.text = CATEGORYS_TITLE
         self.lblDoneNotes.text = DONE_NOTES_TITLE
         self.lblWaitingNotes.text = WAITING_NOTES_TITLE
+        self.txtPassword.textFiled.text = ".  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+
     }
 
     func setupData() {
@@ -75,4 +84,34 @@ extension ProfileViewController {
     }
 
 }
+
+extension ProfileViewController {
+
+    @objc func updatePassword() {
+        let vc: UpdatePasswordViewController = UpdatePasswordViewController.instantiate(appStoryboard: .Settings)
+        vc._push()
+    }
+
+    func updateUserData() {
+        let firstName = self.txtFirstName.text ?? ""
+        let lastName = self.txtLastName.text ?? ""
+        let phone = self.txtPhone.text ?? ""
+        let userController = UserController()
+
+        if firstName.isEmpty || lastName.isEmpty || phone.isEmpty {
+            FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE)
+            return
+        } else if firstName == UserData.firstName && lastName == UserData.lastName && phone == UserData.phone {
+            return
+        }
+
+        let user = User.init(firsName: firstName, lastName: lastName, phone: phone)
+        userController.updateUserData(user: user) {
+            self.lblName.text = "\(UserData.firstName + " " + UserData.lastName)"
+            self.txtPhone.textFiled.text = UserData.phone
+            self._showAlert(message: DATA_MODIFIED_MESSAGE)
+        }
+    }
+}
+
 

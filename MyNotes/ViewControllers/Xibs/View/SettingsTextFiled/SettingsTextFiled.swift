@@ -12,7 +12,7 @@ class SettingsTextFiled: UIView {
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var textFiled: UITextField!
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureXib()
@@ -59,6 +59,12 @@ class SettingsTextFiled: UIView {
         }
         get {
             return "placeholder"
+        }
+    }
+
+    var text: String? {
+        get {
+            return self.textFiled.text
         }
     }
 

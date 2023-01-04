@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User {
+class User: GTCodable {
 
     var uid: String?
     var firsName: String?
@@ -41,6 +41,7 @@ class User {
         self.categories = _dictionary["categories"] as? Int
         self.doneNotes = _dictionary["doneNotes"] as? Int
         self.waitingNotes = _dictionary["waitingNotes"] as? Int
+        self.password = _dictionary["password"] as? String
         self.uid = uid
     }
 
@@ -56,4 +57,5 @@ class User {
         ]
         return dictionary as [String: Any]
     }
+
 }

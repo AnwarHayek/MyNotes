@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
         <array key="Quicksand-Medium.ttf">
             <string>Quicksand-Medium</string>
         </array>
@@ -124,7 +127,7 @@
         <scene sceneID="jms-SS-Mb8">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="srn-2A-GER" customClass="ProfileViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5X6-Nv-04m">
+                    <view key="view" contentMode="scaleToFill" id="5X6-Nv-04m" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -331,9 +334,26 @@
                                                                 <rect key="frame" x="20" y="125.66666666666664" width="300" height="33.666666666666671"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mG2-Sr-a7C" customClass="SettingsTextFiled" customModule="MyNotes" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hci-vb-B3X">
                                                                 <rect key="frame" x="20" y="174.33333333333331" width="300" height="34"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mG2-Sr-a7C" customClass="SettingsTextFiled" customModule="MyNotes" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </view>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ADI-gH-ZFe">
+                                                                        <rect key="frame" x="272.33333333333331" y="11" width="7.6666666666666856" height="12"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="mG2-Sr-a7C" firstAttribute="top" secondItem="Hci-vb-B3X" secondAttribute="top" id="0H0-qZ-cYv"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="mG2-Sr-a7C" secondAttribute="bottom" id="5GC-di-BGz"/>
+                                                                    <constraint firstItem="mG2-Sr-a7C" firstAttribute="leading" secondItem="Hci-vb-B3X" secondAttribute="leading" id="RXQ-2T-DfD"/>
+                                                                    <constraint firstItem="ADI-gH-ZFe" firstAttribute="centerY" secondItem="Hci-vb-B3X" secondAttribute="centerY" id="Zby-mz-69Y"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="mG2-Sr-a7C" secondAttribute="trailing" id="bv1-i6-dj6"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="ADI-gH-ZFe" secondAttribute="trailing" constant="20" id="uZg-GQ-w2e"/>
+                                                                </constraints>
                                                             </view>
                                                         </subviews>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="28" leading="20" bottom="12" trailing="20"/>
@@ -389,6 +409,7 @@
                     </view>
                     <connections>
                         <outlet property="btnSave" destination="zdn-IU-szr" id="ivW-Zz-B7Y"/>
+                        <outlet property="imgArrow" destination="ADI-gH-ZFe" id="Rb2-4M-ygt"/>
                         <outlet property="lblCategories" destination="CwX-DG-ov4" id="br1-fT-Cz5"/>
                         <outlet property="lblCategoriesNumber" destination="lQ0-Ux-ctd" id="nw3-aN-Kom"/>
                         <outlet property="lblCharacter" destination="EpZ-S2-3DC" id="Zpr-SB-Pt8"/>
@@ -398,9 +419,9 @@
                         <outlet property="lblName" destination="ncM-5F-Ew0" id="gYd-gw-axa"/>
                         <outlet property="lblWaitingNotes" destination="GrR-hj-SQP" id="Ry7-rz-xtV"/>
                         <outlet property="lblWaitingNotesNumber" destination="RBy-cM-u0r" id="Vig-yV-kcP"/>
-                        <outlet property="txtEmail" destination="mG2-Sr-a7C" id="gsL-eh-1Qm"/>
                         <outlet property="txtFirstName" destination="q6w-yT-uza" id="tbJ-19-IgQ"/>
                         <outlet property="txtLastName" destination="DP6-k9-CJk" id="rgE-TM-OCE"/>
+                        <outlet property="txtPassword" destination="mG2-Sr-a7C" id="CqB-Tg-z4N"/>
                         <outlet property="txtPhone" destination="hll-40-dGM" id="pOg-gk-NJk"/>
                     </connections>
                 </viewController>
@@ -475,12 +496,108 @@
             </objects>
             <point key="canvasLocation" x="1643" y="-55"/>
         </scene>
+        <!--Update Password View Controller-->
+        <scene sceneID="SQK-Um-neX">
+            <objects>
+                <viewController storyboardIdentifier="UpdatePasswordViewController" id="CIU-JT-UqE" customClass="UpdatePasswordViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mu9-2b-IZB" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZxD-Ax-D6x">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVS-6Y-GCC">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="98.666666666666671"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23x-AG-Sna">
+                                        <rect key="frame" x="0.0" y="98.666666666666671" width="390" height="41.000000000000014"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="30"/>
+                                        <color key="textColor" name="Navy "/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Je-hw-eIS">
+                                        <rect key="frame" x="0.0" y="139.66666666666666" width="390" height="41.666666666666657"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eEO-mk-V5L">
+                                        <rect key="frame" x="0.0" y="181.33333333333337" width="390" height="176.66666666666663"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-uz-jGB" customClass="CustomTextFiled" customModule="MyNotes" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="0.0" width="340" height="45.666666666666664"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jm-Sx-7mQ" customClass="CustomTextFiled" customModule="MyNotes" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="65.666666666666657" width="340" height="45.333333333333343"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBs-Ll-WBB" customClass="CustomTextFiled" customModule="MyNotes" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="130.99999999999997" width="340" height="45.666666666666657"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="25" bottom="0.0" trailing="25"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2sj-0M-lkd">
+                                        <rect key="frame" x="0.0" y="358" width="390" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsU-4S-41D" customClass="CustomButton" customModule="MyNotes" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="30" width="330" height="54"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="54" id="gNo-Yk-ibA"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="btnSave:" destination="CIU-JT-UqE" eventType="touchUpInside" id="Pc5-yt-dxp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="30" leading="30" bottom="0.0" trailing="30"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tin-vE-cTB">
+                                        <rect key="frame" x="0.0" y="442" width="390" height="402"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gP4-df-GCE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZxD-Ax-D6x" firstAttribute="top" secondItem="Mu9-2b-IZB" secondAttribute="top" id="6qd-0G-8qb"/>
+                            <constraint firstAttribute="bottom" secondItem="ZxD-Ax-D6x" secondAttribute="bottom" id="9yJ-cT-WGX"/>
+                            <constraint firstItem="gP4-df-GCE" firstAttribute="trailing" secondItem="ZxD-Ax-D6x" secondAttribute="trailing" id="INn-xP-vQY"/>
+                            <constraint firstItem="eEO-mk-V5L" firstAttribute="height" secondItem="Mu9-2b-IZB" secondAttribute="height" multiplier="170/812" id="NQp-0V-aBO"/>
+                            <constraint firstItem="0Je-hw-eIS" firstAttribute="height" secondItem="Mu9-2b-IZB" secondAttribute="height" multiplier="40/812" id="PeU-xB-gzm"/>
+                            <constraint firstItem="QVS-6Y-GCC" firstAttribute="height" secondItem="Mu9-2b-IZB" secondAttribute="height" multiplier="95/812" id="ie4-8t-b9c"/>
+                            <constraint firstItem="ZxD-Ax-D6x" firstAttribute="leading" secondItem="gP4-df-GCE" secondAttribute="leading" id="ovx-uM-7Bg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSave" destination="IsU-4S-41D" id="LiZ-iT-jW6"/>
+                        <outlet property="lblUpdatePassword" destination="23x-AG-Sna" id="R8O-Zo-OLG"/>
+                        <outlet property="txtConfirmPassword" destination="VBs-Ll-WBB" id="Wgw-x0-MNS"/>
+                        <outlet property="txtNewPassword" destination="2jm-Sx-7mQ" id="gPk-q9-q4y"/>
+                        <outlet property="txtOldPassword" destination="Fe8-uz-jGB" id="5yt-LD-2Vz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3E-bU-DhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2385" y="-55"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background" width="375" height="812"/>
+        <image name="ic_Arrow" width="7.6666665077209473" height="12"/>
         <image name="ic_Logo" width="138" height="199.33332824707031"/>
         <namedColor name="Blue">
             <color red="0.41568627450980394" green="0.56470588235294117" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Navy ">
+            <color red="0.13725490196078433" green="0.12549019607843137" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

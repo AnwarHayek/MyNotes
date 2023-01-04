@@ -14,4 +14,9 @@ class FailureResponse {
     func showError(error: Error) {
         AppDelegate.shared?.rootNavigationController?._showErrorAlert(message: error.localizedDescription)
     }
+
+    func showError(message: String) {
+        let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: message])
+        AppDelegate.shared?.rootNavigationController?._showErrorAlert(message: error.localizedDescription)
+    }
 }

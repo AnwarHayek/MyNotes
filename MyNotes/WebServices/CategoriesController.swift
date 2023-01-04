@@ -38,7 +38,7 @@ class CategoriesController {
                 }
                 return
             }
-            FailureResponse.shared.showError(error: EMPTY_FIELDS_ERROR)
+            FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE)
         }
     }
 
@@ -57,7 +57,7 @@ class CategoriesController {
                 }
                 return
             }
-            FailureResponse.shared.showError(error: EMPTY_FIELDS_ERROR)
+            FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE)
         }
     }
 
@@ -72,6 +72,7 @@ class CategoriesController {
             Helper.showLoader(isLoading: true)
             ref.child("users").child(UserData.uid ?? "").child("Categories").observeSingleEvent(of: .value, with: { (snapshot)in
                 Helper.showLoader(isLoading: false)
+
 
                 for user_child in (snapshot.children) {
                     guard let user_snap = user_child as? DataSnapshot else { return }

@@ -65,9 +65,19 @@
 "Arabic" = "العربية";
 "English" = "English";
 
+// MARK: - Update Password
+"Update Password" = "تغير كلمة المرور";
+"Old Password" = "كلمة المرور القديمة";
+"New Password" = "كلمة المرور الجديدة";
+"Confirm Password" = "تأكيد كلمة المرور";
+
 // MARK: - General
 "alert" = "تنبيه";
 "Please enter all data" = "الرجاء إدخال جميع البيانات";
 "Server error" = "خطأ في الخادم";
 "Do you really want to logout?" = "هل انت متأكد انك تريد تسجيل الخروج ؟";
 "Ok" = "حسنا";
+"Password changed successfully" = "تم تغيير كلمة المرور بنجاح";
+"The password is incorrect" = "كلمة المرور غير صحيحة";
+"Please make sure your passwords match" = "يرجى التأكد من تطابق كلمات السر الخاصة بك";
+"The data has been modified successfully" = "تم تعديل البيانات بنجاح";

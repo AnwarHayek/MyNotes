@@ -27,10 +27,6 @@ let CATEGORIES = "Categories"
 let USER_KEY = "USER"
 let ID_KEY = "ID"
 
-// MARK: - Error
-let EMPTY_FIELDS_ERROR = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: EMPTY_FIELDS_MESSAGE])
-let INTERNET_NOT_AVAILABLE_ERROR = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: INTERNET_NOT_AVAILABLE_MESSAGE])
-
 // MARK: - Format
 let DATE_FORMAT = "yyyy-MM-dd HH:mm:ss"
 let TIME_FORMAT = "h:mm a"
@@ -45,10 +41,9 @@ enum AppStoryboard: String {
 // MARK: - Function
 func checkInternet() -> Bool {
     if Reachability.isConnectedToNetwork() == false {
-        FailureResponse.shared.showError(error: INTERNET_NOT_AVAILABLE_ERROR)
+        FailureResponse.shared.showError(message: INTERNET_NOT_AVAILABLE_MESSAGE)
         return false
     }
     return true
 }
-
 

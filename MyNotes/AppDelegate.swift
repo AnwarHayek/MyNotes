@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Magical Record
         MagicalRecord.setupAutoMigratingCoreDataStack()
 
-        debugPrint(">>\(MagicalRecord.currentStack())")
+        debugPrint(">>\(MagicalRecord.currentStack())<<")
         //IQKeyboardManager
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true

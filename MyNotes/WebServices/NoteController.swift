@@ -38,7 +38,7 @@ class NoteController {
                 }
                 return
             }
-            FailureResponse.shared.showError(error: EMPTY_FIELDS_ERROR)
+            FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE)
         }
     }
 
@@ -57,7 +57,7 @@ class NoteController {
                 }
                 return
             }
-            FailureResponse.shared.showError(error: EMPTY_FIELDS_ERROR) }
+            FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE) }
     }
 
     // MARK: Delete Note

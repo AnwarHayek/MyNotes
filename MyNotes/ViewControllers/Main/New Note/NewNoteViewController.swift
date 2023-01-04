@@ -14,7 +14,6 @@ class NewNoteViewController: UIViewController {
 
     @IBOutlet weak var txtNoteTitle: CustomTextFiled!
     @IBOutlet weak var txtDescription: CustomTextFiled!
-
     @IBOutlet weak var btnSave: CustomButton!
 
     var category: Category?
@@ -36,7 +35,7 @@ class NewNoteViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
+
     @IBAction func btnSave(_ sender: Any) {
         view.endEditing(true)
         self.action()
@@ -44,7 +43,7 @@ class NewNoteViewController: UIViewController {
 }
 
 extension NewNoteViewController {
-    
+
     func setupView() {
         if isUpdate {
             self.lblNewNote.text = UPDATE_NOTE_TITLE

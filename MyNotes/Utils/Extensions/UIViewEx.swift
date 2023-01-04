@@ -73,4 +73,12 @@ extension UIView {
             return self.layer.shadowOpacity
         }
     }
+
+    // MARK: Guesture
+    func addTapGuesture(target: Any, action: Selector) {
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        tap.numberOfTapsRequired = 1
+        addGestureRecognizer(tap)
+        isUserInteractionEnabled = true
+    }
 }

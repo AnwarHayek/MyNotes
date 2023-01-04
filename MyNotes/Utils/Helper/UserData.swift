@@ -11,7 +11,7 @@ class UserData {
 
     static func saveUser(user: User?) {
         guard let user = user else { return }
-        let data = try? JSONSerialization.data(withJSONObject: user.getDictionary(), options: .fragmentsAllowed)
+        let data = try? JSONSerialization.data(withJSONObject: user.toDictionary(), options: .fragmentsAllowed)
         UserDefaults.standard.setValue(data, forKey: USER_KEY)
         UserDefaults.standard.set(user.uid, forKey: ID_KEY)
         UserDefaults.standard.synchronize()
