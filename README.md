@@ -1,6 +1,7 @@
 # MyNotes
 Application for writing notes
 
+### [Youtube](https://www.youtube.com/watch?v=jjKijMtLOKw)
 ## Capabilities
 + Add notes and arrange them into categories
 + The application works in two languages - Arabic and English
