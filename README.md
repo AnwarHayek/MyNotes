@@ -13,7 +13,6 @@ Application for writing notes
 + Programmatic UI 
 + Compositional Layout
 + Firebase
-+ Firebase Crashlytics
 + Core Data
 
 ## Third Parties
