@@ -81,3 +81,5 @@
 "The password is incorrect" = "كلمة المرور غير صحيحة";
 "Please make sure your passwords match" = "يرجى التأكد من تطابق كلمات السر الخاصة بك";
 "The data has been modified successfully" = "تم تعديل البيانات بنجاح";
+"Internet Connection not Available!" = "لا يوجد إتصال بالإنترنت";
+"Error" = "خطأ";

@@ -15,6 +15,7 @@
 		04108B442923797D000D2876 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04108B422923797D000D2876 /* SettingsCell.xib */; };
 		04108B4729238AEC000D2876 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04108B4629238AEC000D2876 /* Settings.swift */; };
 		0448C459296034E10033FE48 /* DictionaryEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448C458296034E10033FE48 /* DictionaryEx.swift */; };
+		044AB57E296DECC500A5631C /* CGPointEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AB57D296DECC500A5631C /* CGPointEx.swift */; };
 		044EA1BE294CD06F00FF048B /* DateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA1BD294CD06F00FF048B /* DateEx.swift */; };
 		046397AD292F420F00A069F2 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046397AC292F420F00A069F2 /* UserController.swift */; };
 		046397AF292F457E00A069F2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046397AE292F457E00A069F2 /* Helper.swift */; };
@@ -50,6 +51,7 @@
 		0494BE42291C1CD100CC25DE /* CustomTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494BE40291C1CD100CC25DE /* CustomTextFiled.swift */; };
 		0494BE43291C1CD100CC25DE /* CustomTextFiled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0494BE41291C1CD100CC25DE /* CustomTextFiled.xib */; };
 		0494BE45291C1D1200CC25DE /* UIResponderEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494BE44291C1D1200CC25DE /* UIResponderEx.swift */; };
+		04976C47298026C7004DB60D /* EmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04976C46298026C7004DB60D /* EmptyDataSet.swift */; };
 		04A5FA75295F713700A1E095 /* GTCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5FA74295F713700A1E095 /* GTCodable.swift */; };
 		04AF3A69DB84012D7DBC2C21 /* Pods_MyNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4F5CD7EA61991841ADEBD3 /* Pods_MyNotes.framework */; };
 		04B1E04A291FFC7E00B9F45C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B1E049291FFC7E00B9F45C /* Main.storyboard */; };
@@ -90,6 +92,7 @@
 		04108B422923797D000D2876 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		04108B4629238AEC000D2876 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		0448C458296034E10033FE48 /* DictionaryEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEx.swift; sourceTree = "<group>"; };
+		044AB57D296DECC500A5631C /* CGPointEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointEx.swift; sourceTree = "<group>"; };
 		044EA1BD294CD06F00FF048B /* DateEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEx.swift; sourceTree = "<group>"; };
 		046397AC292F420F00A069F2 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		046397AE292F457E00A069F2 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 		0494BE40291C1CD100CC25DE /* CustomTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFiled.swift; sourceTree = "<group>"; };
 		0494BE41291C1CD100CC25DE /* CustomTextFiled.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextFiled.xib; sourceTree = "<group>"; };
 		0494BE44291C1D1200CC25DE /* UIResponderEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderEx.swift; sourceTree = "<group>"; };
+		04976C46298026C7004DB60D /* EmptyDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSet.swift; sourceTree = "<group>"; };
 		04A5FA74295F713700A1E095 /* GTCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTCodable.swift; sourceTree = "<group>"; };
 		04B1E049291FFC7E00B9F45C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04B1E04D291FFD1200B9F45C /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 			children = (
 				04916417292D18FF00246DA0 /* UserProfile.swift */,
 				04916419292D191600246DA0 /* DataBaseManager.swift */,
+				04976C46298026C7004DB60D /* EmptyDataSet.swift */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				04E4DF262943CCE7002ACAB6 /* UIButtonEx.swift */,
 				044EA1BD294CD06F00FF048B /* DateEx.swift */,
 				04A5FA74295F713700A1E095 /* GTCodable.swift */,
+				044AB57D296DECC500A5631C /* CGPointEx.swift */,
 				0448C458296034E10033FE48 /* DictionaryEx.swift */,
 			);
 			path = Extensions;
@@ -684,6 +690,7 @@
 			files = (
 				046397AD292F420F00A069F2 /* UserController.swift in Sources */,
 				04B1E0672920025E00B9F45C /* CollectionViewEx.swift in Sources */,
+				044AB57E296DECC500A5631C /* CGPointEx.swift in Sources */,
 				0494BE42291C1CD100CC25DE /* CustomTextFiled.swift in Sources */,
 				04801E182932B51500D015AF /* CategoriesController.swift in Sources */,
 				04916418292D18FF00246DA0 /* UserProfile.swift in Sources */,
@@ -705,6 +712,7 @@
 				04801E1C2932B85500D015AF /* Note.swift in Sources */,
 				04801E1A2932B7F000D015AF /* Category.swift in Sources */,
 				048702532924295C004444FA /* SettingsTextFiled.swift in Sources */,
+				04976C47298026C7004DB60D /* EmptyDataSet.swift in Sources */,
 				04C148ED291E8DC700E91DC8 /* ContainerView.swift in Sources */,
 				046397B1292F464C00A069F2 /* ProgressHUDEx.swift in Sources */,
 				04108B3F29237642000D2876 /* ProfileViewController.swift in Sources */,

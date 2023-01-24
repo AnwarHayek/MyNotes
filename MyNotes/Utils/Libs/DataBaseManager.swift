@@ -13,6 +13,10 @@ class DataBaseManager {
     static let shared = DataBaseManager()
 
     func sync(categories: [Category]) {
+        
+        TNote.mr_truncateAll()
+        TCategories.mr_truncateAll()
+        NSManagedObjectContext.mr_default().mr_saveToPersistentStoreAndWait()
 
         for item in categories {
             let category: TCategories? = TCategories.mr_findFirstOrCreate(byAttribute: "uid", withValue: item.uid ?? "")
@@ -24,10 +28,10 @@ class DataBaseManager {
             var notes: [TNote] = []
 
             if let _notes = item.notes {
-                
+
                 for item in _notes {
                     let note: TNote? = TNote.mr_findFirstOrCreate(byAttribute: "uid", withValue: item.uid ?? "")
-                    
+
                     note?.uid = item.uid
                     note?.title = item.title
                     note?.isDone = item.isDone ?? false
@@ -37,8 +41,6 @@ class DataBaseManager {
                         category?.notes?.adding(note)
                         notes.append(note)
                     }
-
-
                 }
                 if notes.count > 0 {
                     category?.notes = NSSet.init(array: notes)

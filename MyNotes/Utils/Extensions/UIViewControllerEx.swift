@@ -90,7 +90,7 @@ extension UIViewController {
     }
 
     func _showErrorAlert(message: String?) {
-        let alert = UIAlertController.init(title: "Error", message: message, preferredStyle: .alert)
+        let alert = UIAlertController.init(title: ERROR, message: message, preferredStyle: .alert)
         let okayAction = UIAlertAction.init(title: "OK", style: .destructive, handler: nil)
 
         alert.addAction(okayAction)

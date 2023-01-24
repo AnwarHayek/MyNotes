@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseDatabase
+import MagicalRecord
 
 class CategoriesController {
 
@@ -72,7 +73,6 @@ class CategoriesController {
             Helper.showLoader(isLoading: true)
             ref.child("users").child(UserData.uid ?? "").child("Categories").observeSingleEvent(of: .value, with: { (snapshot)in
                 Helper.showLoader(isLoading: false)
-
 
                 for user_child in (snapshot.children) {
                     guard let user_snap = user_child as? DataSnapshot else { return }

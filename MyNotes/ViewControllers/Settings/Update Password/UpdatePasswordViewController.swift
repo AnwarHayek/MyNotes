@@ -47,6 +47,10 @@ extension UpdatePasswordViewController {
         self.txtOldPassword.placeholder = OLD_PASSWORD_TITLE
         self.txtConfirmPassword.placeholder = CONFIRM_PASSWORD_TITLE
         self.btnSave.title = SAVE_TITLE
+
+        self.txtNewPassword.isSecureTextEntry = true
+        self.txtOldPassword.isSecureTextEntry = true
+        self.txtConfirmPassword.isSecureTextEntry = true
     }
 
     func setupData() {

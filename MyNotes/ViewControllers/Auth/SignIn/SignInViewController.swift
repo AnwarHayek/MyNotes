@@ -49,6 +49,7 @@ extension SignInViewController {
 
     func setupView() {
         self.txtPassword.isSecureTextEntry = true
+        self.txtEmail.keyboardType = .emailAddress
     }
 
     func localized() {

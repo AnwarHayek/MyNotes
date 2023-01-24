@@ -18,6 +18,8 @@ class GeneralTableView: UITableView {
 
     var selectHandler: ((_ indexPath: IndexPath) -> Void)?
 
+    var isShowEmptyData: ((_ isShowEmptyData: Bool) -> Void)?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         self.delegate = self
@@ -35,7 +37,6 @@ extension GeneralTableView: UITableViewDataSource {
 
     // MARK: Cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         guard let cellIdentifier = self.cellIdentifier else { return UITableViewCell() }
         let cell = self.dequeueReusableCell(withIdentifier: cellIdentifier) as! GeneralTableViewCell
         let object = self.object[indexPath.item]
@@ -62,5 +63,12 @@ extension GeneralTableView: UITableViewDataSource {
         if let cell = tableView.cellForRow(at: indexPath) as? GeneralTableViewCell {
             cell.didselect(tableView, didSelectRowAt: indexPath)
         }
+    }
+}
+
+extension GeneralTableView {
+
+    func isShowEmptyData(_ isShowEmptyData: Bool) {
+
     }
 }

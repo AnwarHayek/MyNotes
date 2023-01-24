@@ -81,3 +81,5 @@
 "The password is incorrect" = "The password is incorrect";
 "Please make sure your passwords match" = "Please make sure your passwords match";
 "The data has been modified successfully" = "The data has been modified successfully";
+"Internet Connection not Available!" = "Internet Connection not Available!";
+"Error" = "Error";

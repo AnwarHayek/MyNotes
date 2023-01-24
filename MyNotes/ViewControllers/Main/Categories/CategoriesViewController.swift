@@ -43,6 +43,9 @@ extension CategoriesViewController {
         self.tableView.cellIdentifier = "CategoriesCell"
         self.tableView.cellHeight = 70
         self.tableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 0, right: 0)
+
+
+
     }
 
     func localized() {
@@ -65,6 +68,13 @@ extension CategoriesViewController {
             }
 
             self.categories = categories
+
+            if self.categories.count == 0 {
+                self.tableView.emptyDataSet(imageHeight: 400, message: "Enter the first category", messageFont: QUICKSAND_BOLD22, image: "ic_EmptyTable")
+                return
+            } else {
+                self.tableView.emptyDataSet(isShow: false, messageFont: QUICKSAND_BOLD22)
+            }
             self.tableView.object = self.categories
             self.tableView.reloadData()
         }
@@ -86,4 +96,3 @@ extension CategoriesViewController {
         })
     }
 }
-

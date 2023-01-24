@@ -71,8 +71,6 @@ let OLD_PASSWORD_TITLE = "Old Password"._localize
 let NEW_PASSWORD_TITLE = "New Password"._localize
 let CONFIRM_PASSWORD_TITLE = "Confirm Password"._localize
 
-
-
 // MARK: - General
 let ALERT_TITLE = "Alert"._localize
 let CONFIRMATION_CATEGORYS_MESSAGE = "Are you sure you want to delete this category?"._localize
@@ -91,6 +89,7 @@ let PASSWORDـCHANGED_MESSAGE = "Password changed successfully"._localize
 let PASSWORD_INCORRECT_MESSAGE = "The password is incorrect"._localize
 let PASSWORDS_MATCH_TITLE = "Please make sure your passwords match"._localize
 let DATA_MODIFIED_MESSAGE = "The data has been modified successfully"._localize
+let ERROR = "Error"._localize
 
 
 

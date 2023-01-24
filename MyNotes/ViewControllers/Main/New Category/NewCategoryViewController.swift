@@ -98,6 +98,7 @@ extension NewCategoryViewController {
         //Update Category
         func updateCategory() {
             categories.uid = self.category?.uid
+            categories.dateCreated = self.category?.dateCreated
             categoriesController.updateCategory(category: categories) {
                 self._showAlert(title: SUCCESS_TITLE, message: SUCCESS_UPDATE_CATEGORYS_MESSAGE) {
                     self._pop()
