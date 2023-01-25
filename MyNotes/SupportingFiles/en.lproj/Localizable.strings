@@ -24,6 +24,7 @@
 // MARK: - Categories
 "Categories" = "Categories";
 "Are you sure you want to delete this category?" = "Are you sure you want to delete this category?";
+"Write the first category" = "Write the first category";
 
 // MARK: - New Category
 "New Category" = "New Category";

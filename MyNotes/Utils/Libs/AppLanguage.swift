@@ -1,20 +1,22 @@
 //
-//  UserProfile.swift
+//  AppLanguage.swift
 //  MyNotes
 //
-//  Created by Anwar Alhayek on 22/11/2022.
+//  Created by Anwar Alhayek on 25/01/2023.
 //
 
 import Foundation
 import UIKit
 
-enum Languages {
-    case english, arabic
+
+enum Languages: String {
+    case english = "en"
+    case arabic = "ar"
 }
 
-class UserProfile {
+class AppLanguage {
 
-    static let shared = UserProfile()
+    static let shared = AppLanguage()
 
     let APPLE_LANGUAGE_KEY = "AppleLanguages"
 
@@ -31,26 +33,13 @@ class UserProfile {
         let userdef = UserDefaults.standard
         let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as! NSArray
         let current = langArray.firstObject as! String
-        let endIndex = current.startIndex
         let currentWithoutLocale = current._subString(from: 0, to: 2)
         return currentWithoutLocale
     }
 
-    func currentAppleLanguageFull() -> String {
+    func setAppleLanguageTo(lang: Languages) {
         let userdef = UserDefaults.standard
-        let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as! NSArray
-        let current = langArray.firstObject as! String
-        return current
-    }
-
-    func setAppleLAnguageTo(lang: String) {
-        let userdef = UserDefaults.standard
-        userdef.set([lang, currentAppleLanguage()], forKey: APPLE_LANGUAGE_KEY)
+        userdef.set([lang.rawValue, currentAppleLanguage()], forKey: APPLE_LANGUAGE_KEY)
         userdef.synchronize()
     }
-
-    func setAppleLanguageTo(lang: Languages) {
-
-    }
-
 }

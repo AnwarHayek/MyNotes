@@ -14,7 +14,7 @@ class CategoriesController {
     var ref: DatabaseReference!
 
     typealias Handler = (() -> Void)?
-    typealias ResultHandler = ((_ categories: [Category]) -> Void)?
+    typealias ResultHandler = ((_ categories: [Category], _ showLocalData: Bool) -> Void)?
 
     init() {
         self.ref = Database.database().reference()
@@ -110,13 +110,13 @@ class CategoriesController {
                 user?.waitingNotes = waitingNotes
                 user?.doneNotes = doneNotes
                 UserData.saveUser(user: user)
-                result?(categories)
+                result?(categories, false)
             }
             ) { (error) in
                 FailureResponse.shared.showError(error: error)
             }
         } else {
-            result?(categories)
+            result?(categories, true)
         }
     }
 

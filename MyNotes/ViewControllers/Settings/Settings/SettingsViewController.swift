@@ -66,7 +66,7 @@ extension SettingsViewController {
             (alert: UIAlertAction!) -> Void in
 
             self._showAlert(title: ALERT_TITLE, message: EDITE_LANGUGE_TITLE, buttonAction1: {
-                UserProfile.shared.setAppleLAnguageTo(lang: "ar")
+                AppLanguage.shared.setAppleLanguageTo(lang: .arabic)
                 exit(0)
             })
         })
@@ -74,7 +74,7 @@ extension SettingsViewController {
         let english = UIAlertAction(title: ENGLISH_TITLE, style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             self._showAlert(title: ALERT_TITLE, message: EDITE_LANGUGE_TITLE, buttonAction1: {
-                UserProfile.shared.setAppleLAnguageTo(lang: "en")
+                AppLanguage.shared.setAppleLanguageTo(lang: .english)
                 exit(0)
             })
         })

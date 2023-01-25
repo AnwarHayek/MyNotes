@@ -43,9 +43,6 @@ extension CategoriesViewController {
         self.tableView.cellIdentifier = "CategoriesCell"
         self.tableView.cellHeight = 70
         self.tableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 0, right: 0)
-
-
-
     }
 
     func localized() {
@@ -57,23 +54,19 @@ extension CategoriesViewController {
     }
 
     func fetchData() {
+
         self.categories.removeAll()
-        categoriesController.getCategory { categories in
-            if categories.count == 0 {
-                let cc = TCategories.mr_findAll() as? [TCategories] ?? []
-                self.categories = cc
-                self.tableView.object = self.categories
-                self.tableView.reloadData()
-                return
-            }
-
+        categoriesController.getCategory { categories, showLocalData in
             self.categories = categories
-
-            if self.categories.count == 0 {
-                self.tableView.emptyDataSet(imageHeight: 400, message: "Enter the first category", messageFont: QUICKSAND_BOLD22, image: "ic_EmptyTable")
-                return
+            //When the internet is out
+            if showLocalData {
+                let categories = TCategories.mr_findAll() as? [TCategories] ?? []
+                self.categories = categories
+            }
+            if self.categories.isEmpty {
+                self.tableView.emptyDataSet(message: WRITE_FIRST_CATEGORYS_MESSAGE, image: "ic_EmptyTable")
             } else {
-                self.tableView.emptyDataSet(isShow: false, messageFont: QUICKSAND_BOLD22)
+                self.tableView.emptyDataSet(isShow: false)
             }
             self.tableView.object = self.categories
             self.tableView.reloadData()

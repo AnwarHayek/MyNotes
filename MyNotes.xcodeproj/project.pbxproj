@@ -32,7 +32,8 @@
 		048702542924295C004444FA /* SettingsTextFiled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048702522924295C004444FA /* SettingsTextFiled.xib */; };
 		0487025629243608004444FA /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487025529243608004444FA /* UIApplicationEx.swift */; };
 		048767E929813D260086635F /* AlertEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048767E829813D250086635F /* AlertEx.swift */; };
-		04916418292D18FF00246DA0 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04916417292D18FF00246DA0 /* UserProfile.swift */; };
+		048767EC2981500B0086635F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 048767EE2981500B0086635F /* InfoPlist.strings */; };
+		048767F129815A850086635F /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048767F029815A850086635F /* AppLanguage.swift */; };
 		0491641A292D191600246DA0 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04916419292D191600246DA0 /* DataBaseManager.swift */; };
 		04919D302921991100CABE34 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04919D2F2921991100CABE34 /* AboutAppViewController.swift */; };
 		0494BE0E291C14F500CC25DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494BE0D291C14F500CC25DE /* AppDelegate.swift */; };
@@ -110,7 +111,9 @@
 		048702522924295C004444FA /* SettingsTextFiled.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTextFiled.xib; sourceTree = "<group>"; };
 		0487025529243608004444FA /* UIApplicationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
 		048767E829813D250086635F /* AlertEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEx.swift; sourceTree = "<group>"; };
-		04916417292D18FF00246DA0 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		048767ED2981500B0086635F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		048767EF2981500D0086635F /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		048767F029815A850086635F /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		04916419292D191600246DA0 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		04919D2F2921991100CABE34 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		0494BE0A291C14F500CC25DE /* MyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,9 +270,9 @@
 		04916416292D18F000246DA0 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				04916417292D18FF00246DA0 /* UserProfile.swift */,
 				04916419292D191600246DA0 /* DataBaseManager.swift */,
 				04976C46298026C7004DB60D /* EmptyDataSet.swift */,
+				048767F029815A850086635F /* AppLanguage.swift */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				0494BE16291C14F600CC25DE /* Assets.xcassets */,
 				0494BE1B291C14F600CC25DE /* Info.plist */,
 				04B90C2D292D484700D14EC1 /* Localizable.strings */,
+				048767EE2981500B0086635F /* InfoPlist.strings */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -631,6 +635,7 @@
 				04F82A3C2920276500A7C907 /* Quicksand-Medium.ttf in Resources */,
 				04C148E5291E740200E91DC8 /* Roboto-Regular.ttf in Resources */,
 				04D6CFFF291EEE1000A6257A /* Quicksand-Bold.ttf in Resources */,
+				048767EC2981500B0086635F /* InfoPlist.strings in Resources */,
 				04108B442923797D000D2876 /* SettingsCell.xib in Resources */,
 				046397B3292F48D100A069F2 /* GoogleService-Info.plist in Resources */,
 				04C148E7291E740200E91DC8 /* Roboto-Light.ttf in Resources */,
@@ -696,7 +701,6 @@
 				044AB57E296DECC500A5631C /* CGPointEx.swift in Sources */,
 				0494BE42291C1CD100CC25DE /* CustomTextFiled.swift in Sources */,
 				04801E182932B51500D015AF /* CategoriesController.swift in Sources */,
-				04916418292D18FF00246DA0 /* UserProfile.swift in Sources */,
 				04D55A7F294F167B0020D329 /* AplicaionCoreData.xcdatamodeld in Sources */,
 				04B1E050291FFD2200B9F45C /* NewCategoryViewController.swift in Sources */,
 				047E9FE6292FACF600E415BB /* FailureResponse.swift in Sources */,
@@ -707,6 +711,7 @@
 				04B90C3B292D73A000D14EC1 /* NotesViewController.swift in Sources */,
 				04073BBA29634AAE007A4C35 /* UpdatePasswordViewController.swift in Sources */,
 				04B1E054291FFD4200B9F45C /* NewNoteViewController.swift in Sources */,
+				048767F129815A850086635F /* AppLanguage.swift in Sources */,
 				0494BE32291C177D00CC25DE /* SignUpViewController.swift in Sources */,
 				04B1E04E291FFD1200B9F45C /* CategoriesViewController.swift in Sources */,
 				04A5FA75295F713700A1E095 /* GTCodable.swift in Sources */,
@@ -753,6 +758,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		048767EE2981500B0086635F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048767ED2981500B0086635F /* en */,
+				048767EF2981500D0086635F /* ar */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		0494BE13291C14F500CC25DE /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

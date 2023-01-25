@@ -24,6 +24,7 @@
 // MARK: - Categories
 "Categories" = "الفئات";
 "Are you sure you want to delete this category?" = "هل أنت متأكد من أنك تريد حذف هذه الفئة؟";
+"Write the first category" = "قم بكتابة بكتابة أول فئة";
 
 // MARK: - New Category
 "New Category" = "فئة جديدة";

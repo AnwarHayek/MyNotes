@@ -25,6 +25,7 @@ let LAST_NAME_TITLE = "Last name"._localize
 // MARK: - Categories
 let CATEGORIES_TITLE = "Categories"._localize
 let CONFIRMATION_CATEGORYS_MESSAGE = "Are you sure you want to delete this category?"._localize
+let WRITE_FIRST_CATEGORYS_MESSAGE = "Write the first category"._localize
 
 // MARK: - New Category
 let NEW_CATEGORY_TITLE = "New Category"._localize

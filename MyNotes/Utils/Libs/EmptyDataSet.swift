@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UITableView {
-    func emptyDataSet(isShow: Bool = true, imageHeight: CGFloat = 200, headerHeight: CGFloat = 400, message: String = "", messageFont: UIFont, image: String = "") {
+    func emptyDataSet(isShow: Bool = true, imageHeight: CGFloat = 200, headerHeight: CGFloat = 400, message: String = "", messageFont: UIFont = SYSTEM_LIGHT_FONT22, image: String = "") {
 
         let height = self.frame.height
         let width = self.frame.width
