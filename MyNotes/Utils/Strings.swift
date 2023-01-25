@@ -24,6 +24,7 @@ let LAST_NAME_TITLE = "Last name"._localize
 
 // MARK: - Categories
 let CATEGORIES_TITLE = "Categories"._localize
+let CONFIRMATION_CATEGORYS_MESSAGE = "Are you sure you want to delete this category?"._localize
 
 // MARK: - New Category
 let NEW_CATEGORY_TITLE = "New Category"._localize
@@ -34,6 +35,8 @@ let CATEGORY_TITLE = "Category"._localize
 let CATEGORY_NAME_TITLE = "Category Name"._localize
 let SAVE_TITLE = "Save"._localize
 let UPDATE_ITLE = "Update"._localize
+let SUCCESS_ADD_CATEGORYS_MESSAGE = "The Category has been added successfully"._localize
+let SUCCESS_UPDATE_CATEGORYS_MESSAGE = "The category has been modified successfully"._localize
 
 // MARK: - New Note
 let NEW_NOTE_TITLE = "New Note"._localize
@@ -41,6 +44,11 @@ let UPDATE_NOTE_TITLE = "Update Note"._localize
 let CREATE_NOTE_TITLE = "Create note"._localize
 let NOTE_TITLE_TITLE = "Note Title"._localize
 let DESCRIPTION_TITLE = "Description"._localize
+let SUCCESS_ADD_NOTE_MESSAGE = "The Note has been added successfully"._localize
+let SUCCESS_UPDATE_NOTE_MESSAGE = "The note has been modified successfully"._localize
+
+// MARK: - Notes
+let CONFIRMATION_NOTE_MESSAGE = "Are you sure you want to delete this note?"._localize
 
 // MARK: - About App
 let ABOUT_APP = "About App"._localize
@@ -64,32 +72,26 @@ let WAITING_NOTES_TITLE = "Waiting Notes"._localize
 let CANCEL_TITLE = "Cancel"._localize
 let ARABIC_TITLE = "Arabic"._localize
 let ENGLISH_TITLE = "English"._localize
+let DATA_MODIFIED_MESSAGE = "The data has been modified successfully"._localize
+let LOGOUT_MESSAGE = "Do you really want to logout?"._localize
 
 // MARK: - Update Password
 let UPDATE_PASSWORD_TITLE = "Update Password"._localize
 let OLD_PASSWORD_TITLE = "Old Password"._localize
 let NEW_PASSWORD_TITLE = "New Password"._localize
 let CONFIRM_PASSWORD_TITLE = "Confirm Password"._localize
+let PASSWORDS_MATCH_TITLE = "Please make sure your passwords match"._localize
+let PASSWORD_INCORRECT_MESSAGE = "The password is incorrect"._localize
+let PASSWORDـCHANGED_MESSAGE = "Password changed successfully"._localize
 
 // MARK: - General
 let ALERT_TITLE = "Alert"._localize
-let CONFIRMATION_CATEGORYS_MESSAGE = "Are you sure you want to delete this category?"._localize
-let CONFIRMATION_NOTE_MESSAGE = "Are you sure you want to delete this note?"._localize
+let ERROR_TITLE = "Error"._localize
+let OK_TITLE = "Ok"._localize
+let SUCCESS_TITLE = "Success!"._localize
 let EMPTY_FIELDS_MESSAGE = "Please enter all data"._localize
 let INTERNET_NOT_AVAILABLE_MESSAGE = "Internet Connection not Available!"._localize
 let SERVER_ERROR_MESSAGE = "Server error"._localize
-let LOGOUT_MESSAGE = "Do you really want to logout?"._localize
-let OK_TITLE = "Ok"._localize
-let SUCCESS_TITLE = "Success!"._localize
-let SUCCESS_ADD_CATEGORYS_MESSAGE = "The Category has been added successfully"._localize
-let SUCCESS_ADD_NOTE_MESSAGE = "The Note has been added successfully"._localize
-let SUCCESS_UPDATE_CATEGORYS_MESSAGE = "The category has been modified successfully"._localize
-let SUCCESS_UPDATE_NOTE_MESSAGE = "The note has been modified successfully"._localize
-let PASSWORDـCHANGED_MESSAGE = "Password changed successfully"._localize
-let PASSWORD_INCORRECT_MESSAGE = "The password is incorrect"._localize
-let PASSWORDS_MATCH_TITLE = "Please make sure your passwords match"._localize
-let DATA_MODIFIED_MESSAGE = "The data has been modified successfully"._localize
-let ERROR = "Error"._localize
 
 
 

@@ -31,6 +31,7 @@
 		048702532924295C004444FA /* SettingsTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048702512924295C004444FA /* SettingsTextFiled.swift */; };
 		048702542924295C004444FA /* SettingsTextFiled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048702522924295C004444FA /* SettingsTextFiled.xib */; };
 		0487025629243608004444FA /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487025529243608004444FA /* UIApplicationEx.swift */; };
+		048767E929813D260086635F /* AlertEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048767E829813D250086635F /* AlertEx.swift */; };
 		04916418292D18FF00246DA0 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04916417292D18FF00246DA0 /* UserProfile.swift */; };
 		0491641A292D191600246DA0 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04916419292D191600246DA0 /* DataBaseManager.swift */; };
 		04919D302921991100CABE34 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04919D2F2921991100CABE34 /* AboutAppViewController.swift */; };
@@ -108,6 +109,7 @@
 		048702512924295C004444FA /* SettingsTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextFiled.swift; sourceTree = "<group>"; };
 		048702522924295C004444FA /* SettingsTextFiled.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTextFiled.xib; sourceTree = "<group>"; };
 		0487025529243608004444FA /* UIApplicationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
+		048767E829813D250086635F /* AlertEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertEx.swift; sourceTree = "<group>"; };
 		04916417292D18FF00246DA0 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		04916419292D191600246DA0 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		04919D2F2921991100CABE34 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				04A5FA74295F713700A1E095 /* GTCodable.swift */,
 				044AB57D296DECC500A5631C /* CGPointEx.swift */,
 				0448C458296034E10033FE48 /* DictionaryEx.swift */,
+				048767E829813D250086635F /* AlertEx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 				046397B1292F464C00A069F2 /* ProgressHUDEx.swift in Sources */,
 				04108B3F29237642000D2876 /* ProfileViewController.swift in Sources */,
 				04108B432923797D000D2876 /* SettingsCell.swift in Sources */,
+				048767E929813D260086635F /* AlertEx.swift in Sources */,
 				04E4DF272943CCE7002ACAB6 /* UIButtonEx.swift in Sources */,
 				047E9FE4292FAA1B00E415BB /* User.swift in Sources */,
 				04E67FA02942706E00B05780 /* NoteController.swift in Sources */,

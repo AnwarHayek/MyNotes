@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+enum Languages {
+    case english, arabic
+}
+
 class UserProfile {
 
     static let shared = UserProfile()
@@ -19,7 +23,7 @@ class UserProfile {
     }
 
     var currentLanguageKey: String? {
-        let langs = UserDefaults.standard.value(forKey: "AppleLanguages") as? Array<String>
+        let langs = UserDefaults.standard.value(forKey: APPLE_LANGUAGE_KEY) as? Array<String>
         return (langs?.first)
     }
 
@@ -43,6 +47,10 @@ class UserProfile {
         let userdef = UserDefaults.standard
         userdef.set([lang, currentAppleLanguage()], forKey: APPLE_LANGUAGE_KEY)
         userdef.synchronize()
+    }
+
+    func setAppleLanguageTo(lang: Languages) {
+
     }
 
 }

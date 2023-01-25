@@ -64,18 +64,19 @@ extension SettingsViewController {
     func showActionSheet() {
         let arabic = UIAlertAction(title: ARABIC_TITLE, style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
-            self._showAlert(title: ALERT_TITLE, message: EDITE_LANGUGE_TITLE) {
+
+            self._showAlert(title: ALERT_TITLE, message: EDITE_LANGUGE_TITLE, buttonAction1: {
                 UserProfile.shared.setAppleLAnguageTo(lang: "ar")
                 exit(0)
-            }
+            })
         })
 
         let english = UIAlertAction(title: ENGLISH_TITLE, style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
-            self._showAlert(title: ALERT_TITLE, message: EDITE_LANGUGE_TITLE) {
+            self._showAlert(title: ALERT_TITLE, message: EDITE_LANGUGE_TITLE, buttonAction1: {
                 UserProfile.shared.setAppleLAnguageTo(lang: "en")
                 exit(0)
-            }
+            })
         })
 
         let cancel = UIAlertAction(title: CANCEL_TITLE, style: .cancel, handler: {

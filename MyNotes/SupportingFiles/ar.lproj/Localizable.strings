@@ -23,6 +23,7 @@
 
 // MARK: - Categories
 "Categories" = "الفئات";
+"Are you sure you want to delete this category?" = "هل أنت متأكد من أنك تريد حذف هذه الفئة؟";
 
 // MARK: - New Category
 "New Category" = "فئة جديدة";
@@ -33,6 +34,8 @@
 "Category Name" = "إسم الفئة";
 "Update" = "تحديث";
 "Update Category" = "تعديل الفئة";
+"The Category has been added successfully" = "تم إضافة الفئة بنجاح";
+"The category has been modified successfully" = "تم تعديل الفئة بنجاح";
 
 // MARK: - New Note
 "New Note" = "مذكرة جديدة";
@@ -40,6 +43,11 @@
 "Note Title" = "عنوان المذكرة";
 "Description" = "الوصف";
 "Update Note" = "تعديل المذكرة";
+"The Note has been added successfully" = "تم إضافة الملاحظة بنجاح";
+"The note has been modified successfully" = "تم تعديل الملاحظة بنجاح";
+
+// MARK: - Notes
+"Are you sure you want to delete this note?" = "هل أنت متأكد من أنك تريد حذف هذه الملاحظة؟";
 
 // MARK: - About App
 "About App" = "عن التطبيق";
@@ -64,22 +72,24 @@
 "Cancel" = "إلغاء";
 "Arabic" = "العربية";
 "English" = "English";
+"The data has been modified successfully" = "تم تعديل البيانات بنجاح";
+"Do you really want to logout?" = "هل انت متأكد انك تريد تسجيل الخروج ؟";
 
 // MARK: - Update Password
 "Update Password" = "تغير كلمة المرور";
 "Old Password" = "كلمة المرور القديمة";
 "New Password" = "كلمة المرور الجديدة";
 "Confirm Password" = "تأكيد كلمة المرور";
-
-// MARK: - General
-"alert" = "تنبيه";
-"Please enter all data" = "الرجاء إدخال جميع البيانات";
-"Server error" = "خطأ في الخادم";
-"Do you really want to logout?" = "هل انت متأكد انك تريد تسجيل الخروج ؟";
-"Ok" = "حسنا";
+"Please make sure your passwords match" = "يرجى التأكد من تطابق كلمات السر الخاصة بك";
 "Password changed successfully" = "تم تغيير كلمة المرور بنجاح";
 "The password is incorrect" = "كلمة المرور غير صحيحة";
-"Please make sure your passwords match" = "يرجى التأكد من تطابق كلمات السر الخاصة بك";
-"The data has been modified successfully" = "تم تعديل البيانات بنجاح";
-"Internet Connection not Available!" = "لا يوجد إتصال بالإنترنت";
+
+// MARK: - General
 "Error" = "خطأ";
+"Alert" = "تنبيه";
+"Ok" = "حسنا";
+"Please enter all data" = "الرجاء إدخال جميع البيانات";
+"Server error" = "خطأ في الخادم";
+"Internet Connection not Available!" = "لا يوجد إتصال بالإنترنت";
+"Success!" = "عملية ناجحة";
+

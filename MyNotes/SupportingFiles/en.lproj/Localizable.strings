@@ -23,6 +23,7 @@
 
 // MARK: - Categories
 "Categories" = "Categories";
+"Are you sure you want to delete this category?" = "Are you sure you want to delete this category?";
 
 // MARK: - New Category
 "New Category" = "New Category";
@@ -33,6 +34,8 @@
 "Category Name" = "Category Name";
 "Update" = "Update";
 "Update Category" = "Update Category";
+"The Category has been added successfully" = "The Category has been added successfully";
+"The category has been modified successfully" = "The category has been modified successfully";
 
 // MARK: - New Note
 "New Note" = "New Note";
@@ -40,6 +43,11 @@
 "Note Title" = "Note Title";
 "Description" = "Description";
 "Update Note" = "Update Note";
+"The Note has been added successfully" = "The Note has been added successfully";
+"The note has been modified successfully" = "The note has been modified successfully";
+
+// MARK: - Notes
+"Are you sure you want to delete this note?" = "Are you sure you want to delete this note?";
 
 // MARK: - About App
 "About App" = "About App";
@@ -64,22 +72,24 @@
 "Cancel" = "Cancel";
 "Arabic" = "العربية";
 "English" = "English";
+"The data has been modified successfully" = "The data has been modified successfully";
+"Do you really want to logout?" = "Do you really want to logout?";
 
 // MARK: - Update Password
 "Update Password" = "Update Password";
 "Old Password" = "Old Password";
 "New Password" = "New Password";
 "Confirm Password" = "Confirm Password";
-
-// MARK: - General
-"alert" = "Alert";
-"Please enter all data" = "Please enter all data";
-"Server error" = "Server error";
-"Do you really want to logout?" = "Do you really want to logout?";
-"Ok" = "Ok";
+"Please make sure your passwords match" = "Please make sure your passwords match";
 "Password changed successfully" = "Password changed successfully";
 "The password is incorrect" = "The password is incorrect";
-"Please make sure your passwords match" = "Please make sure your passwords match";
-"The data has been modified successfully" = "The data has been modified successfully";
-"Internet Connection not Available!" = "Internet Connection not Available!";
+
+// MARK: - General
 "Error" = "Error";
+"Alert" = "Alert";
+"Ok" = "Ok";
+"Please enter all data" = "Please enter all data";
+"Server error" = "Server error";
+"Internet Connection not Available!" = "Internet Connection not Available!";
+"Success!" = "Success!";
+
