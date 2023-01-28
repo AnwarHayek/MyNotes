@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import EmptyDataSet_Swift
 
 class CategoriesViewController: UIViewController {
 
     @IBOutlet weak var tableView: GeneralTableView!
 
     var categories: [Any] = []
+
 
     let categoriesController = CategoriesController()
 
@@ -64,13 +66,23 @@ extension CategoriesViewController {
                 self.categories = categories
             }
             if self.categories.isEmpty {
-                self.tableView.emptyDataSet(message: WRITE_FIRST_CATEGORYS_MESSAGE, image: "ic_EmptyTable")
+
             } else {
-                self.tableView.emptyDataSet(isShow: false)
+//                self.tableView.emptyDataSet(isShow: false)
             }
             self.tableView.object = self.categories
+
+//            self.tableView.emptyDataSetView { view in
+//                view.backgroundColor = .red
+//                view.customView(UIView.init(frame: CGRect(x: 0, y: 0, width: 150, height: 150)))
+//            }
+
             self.tableView.reloadData()
+            self.tableView.emptyDataSet(message: WRITE_FIRST_CATEGORYS_MESSAGE, image: "ic_EmptyTable")
+
+
         }
+
     }
 }
 
@@ -87,5 +99,25 @@ extension CategoriesViewController {
                 self.fetchData()
             }
         })
+    }
+}
+
+//
+extension CategoriesViewController: EmptyDataSetSource, EmptyDataSetDelegate {
+
+    func emptyDataSetShouldDisplay(_ scrollView: UIScrollView) -> Bool {
+        return true
+    }
+
+    func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
+        return true
+    }
+
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        return NSAttributedString.init(string: "SORRY_TITLE", attributes: [NSAttributedString.Key.font: SYSTEM_BOLD_FONT22])
+    }
+
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        return NSAttributedString.init(string: "NO_DATA_TITLE", attributes: [NSAttributedString.Key.font: SYSTEM_BOLD_FONT22])
     }
 }
