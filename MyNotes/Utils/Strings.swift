@@ -50,6 +50,7 @@ let SUCCESS_UPDATE_NOTE_MESSAGE = "The note has been modified successfully"._loc
 
 // MARK: - Notes
 let CONFIRMATION_NOTE_MESSAGE = "Are you sure you want to delete this note?"._localize
+let WRITE_FIRST_NOTE_MESSAGE = "Write the first Note"._localize
 
 // MARK: - About App
 let ABOUT_APP = "About App"._localize

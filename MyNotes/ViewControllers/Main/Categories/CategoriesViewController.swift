@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import EmptyDataSet_Swift
 
 class CategoriesViewController: UIViewController {
 
@@ -60,29 +59,16 @@ extension CategoriesViewController {
         self.categories.removeAll()
         categoriesController.getCategory { categories, showLocalData in
             self.categories = categories
-            //When the internet is out
+            
             if showLocalData {
                 let categories = TCategories.mr_findAll() as? [TCategories] ?? []
                 self.categories = categories
             }
-            if self.categories.isEmpty {
-
-            } else {
-//                self.tableView.emptyDataSet(isShow: false)
-            }
+            
             self.tableView.object = self.categories
-
-//            self.tableView.emptyDataSetView { view in
-//                view.backgroundColor = .red
-//                view.customView(UIView.init(frame: CGRect(x: 0, y: 0, width: 150, height: 150)))
-//            }
-
             self.tableView.reloadData()
             self.tableView.emptyDataSet(message: WRITE_FIRST_CATEGORYS_MESSAGE, image: "ic_EmptyTable")
-
-
         }
-
     }
 }
 
@@ -102,22 +88,3 @@ extension CategoriesViewController {
     }
 }
 
-//
-extension CategoriesViewController: EmptyDataSetSource, EmptyDataSetDelegate {
-
-    func emptyDataSetShouldDisplay(_ scrollView: UIScrollView) -> Bool {
-        return true
-    }
-
-    func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView) -> Bool {
-        return true
-    }
-
-    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        return NSAttributedString.init(string: "SORRY_TITLE", attributes: [NSAttributedString.Key.font: SYSTEM_BOLD_FONT22])
-    }
-
-    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        return NSAttributedString.init(string: "NO_DATA_TITLE", attributes: [NSAttributedString.Key.font: SYSTEM_BOLD_FONT22])
-    }
-}

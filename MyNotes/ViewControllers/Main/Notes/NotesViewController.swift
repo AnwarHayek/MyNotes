@@ -27,6 +27,7 @@ class NotesViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView.emptyDataSet(message: WRITE_FIRST_CATEGORYS_MESSAGE, image: "ic_EmptyTable")
     }
 
 }
@@ -41,6 +42,7 @@ extension NotesViewController {
         self.tableView.dataSource = self
         self.tableView._registerCell = NotesCell.self
         self.tableView.contentInset = UIEdgeInsets(top: 17, left: 0, bottom: 0, right: 0)
+
     }
 
     func localized() {
@@ -99,6 +101,7 @@ extension NotesViewController: UITableViewDataSource {
                 self.noteController.deleteNote(note: self.notes[indexPath.item], category: category) {
                     self.notes.remove(at: indexPath.item)
                     self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                    self.tableView.emptyDataSet(message: WRITE_FIRST_CATEGORYS_MESSAGE, image: "ic_EmptyTable")
                 }
             })
             handeler(true)
