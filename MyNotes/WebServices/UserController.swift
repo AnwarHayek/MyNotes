@@ -106,7 +106,7 @@ class UserController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            UserData.clearUserDefaults()
+            UserData.deleteUserData()
             TNote.mr_truncateAll()
             TCategories.mr_truncateAll()
             NSManagedObjectContext.mr_default().mr_saveToPersistentStoreAndWait()

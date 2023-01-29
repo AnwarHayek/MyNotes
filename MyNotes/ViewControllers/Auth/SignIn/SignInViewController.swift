@@ -80,6 +80,10 @@ extension SignInViewController {
         let email = self.txtEmail.text
         let password = self.txtPassword.text
 
+        if self.isTextEmpty(texts: [email, password]) {
+            return
+        }
+
         let user = User.init(email: email, password: password)
         let userController = UserController()
         userController.signInByEmail(user: user) {

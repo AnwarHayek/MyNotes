@@ -94,13 +94,12 @@ extension ProfileViewController {
     }
 
     func updateUserData() {
-        let firstName = self.txtFirstName.text ?? ""
-        let lastName = self.txtLastName.text ?? ""
-        let phone = self.txtPhone.text ?? ""
+        let firstName = self.txtFirstName.text
+        let lastName = self.txtLastName.text
+        let phone = self.txtPhone.text
         let userController = UserController()
 
-        if firstName.isEmpty || lastName.isEmpty || phone.isEmpty {
-            FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE)
+        if self.isTextEmpty(texts: [firstName, lastName, phone]) {
             return
         } else if firstName == UserData.firstName && lastName == UserData.lastName && phone == UserData.phone {
             return

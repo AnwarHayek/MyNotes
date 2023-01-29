@@ -34,6 +34,10 @@ class UserData {
         }
     }
 
+    static func deleteUserData() {
+        UserDefaults.standard.removeObject(forKey: USER_KEY)
+    }
+
     static var uid: String? {
         set {
             loadUser()?.uid = newValue

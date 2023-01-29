@@ -26,38 +26,34 @@ class NoteController {
         note.dateCreated = date
         note.uid = noteId
         if checkInternet() == true {
-            if note.title != "", note.description != "" {
-                Helper.showLoader(isLoading: true)
-                ref.child("users").child(UserData.uid ?? "").child("Categories").child(category.uid ?? "").child("notes").child(noteId).setValue(note.getDictionary()) { error, _ in
-                    Helper.showLoader(isLoading: false)
-                    if let _error = error {
-                        FailureResponse.shared.showError(error: _error)
-                        return
-                    }
-                    result?()
+            Helper.showLoader(isLoading: true)
+            ref.child("users").child(UserData.uid ?? "").child("Categories").child(category.uid ?? "").child("notes").child(noteId).setValue(note.getDictionary()) { error, _ in
+                Helper.showLoader(isLoading: false)
+                if let _error = error {
+                    FailureResponse.shared.showError(error: _error)
+                    return
                 }
-                return
+                result?()
             }
-            FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE)
+            return
         }
     }
 
     // MARK: Note deata Update on Realtime Database
     func updateNote(note: Note, category: Category, result: Handler) {
+        guard let _noteUid = note.uid, let _categoryUid = category.uid else { return }
         if checkInternet() {
-            if note.title != "", note.description != "", note.uid != "" {
-                Helper.showLoader(isLoading: true)
-                ref.child("users").child(UserData.uid ?? "").child("Categories").child(category.uid ?? "").child("notes").child(note.uid ?? "").updateChildValues(note.getDictionary()) { error, dataBaseReferance in
-                    Helper.showLoader(isLoading: false)
-                    if let _error = error {
-                        FailureResponse.shared.showError(error: _error)
-                        return
-                    }
-                    result?()
+            Helper.showLoader(isLoading: true)
+            ref.child("users").child(UserData.uid ?? "").child("Categories").child(_categoryUid).child("notes").child(_noteUid).updateChildValues(note.getDictionary()) { error, dataBaseReferance in
+                Helper.showLoader(isLoading: false)
+                if let _error = error {
+                    FailureResponse.shared.showError(error: _error)
+                    return
                 }
-                return
+                result?()
             }
-            FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE) }
+            return
+        }
     }
 
     // MARK: Delete Note

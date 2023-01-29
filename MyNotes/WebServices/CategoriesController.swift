@@ -27,19 +27,16 @@ class CategoriesController {
         category.dateCreated = date
         category.uid = categoryId
         if checkInternet() {
-            if category.categoryName != "", category.shortDescription != "" {
-                Helper.showLoader(isLoading: true)
-                ref.child("users").child(UserData.uid ?? "").child("Categories").child(categoryId).setValue(category.getDictionary()) { error, dataBaseReferance in
-                    Helper.showLoader(isLoading: false)
-                    if let _error = error {
-                        FailureResponse.shared.showError(error: _error)
-                        return
-                    }
-                    result?()
+            Helper.showLoader(isLoading: true)
+            ref.child("users").child(UserData.uid ?? "").child("Categories").child(categoryId).setValue(category.getDictionary()) { error, dataBaseReferance in
+                Helper.showLoader(isLoading: false)
+                if let _error = error {
+                    FailureResponse.shared.showError(error: _error)
+                    return
                 }
-                return
+                result?()
             }
-            FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE)
+            return
         }
     }
 

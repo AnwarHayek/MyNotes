@@ -80,6 +80,10 @@ extension NewCategoryViewController {
         let categories = Category.init(categoryName: categoryName, shortDescription: shortDescription)
         let categoriesController = CategoriesController()
 
+        if self.isTextEmpty(texts: [categoryName, shortDescription]) {
+            return
+        }
+
         if isUpdate {
             updateCategory()
         } else {

@@ -82,6 +82,10 @@ extension NewNoteViewController {
         let note = Note.init(title: noteTitle, description: noteDescription, isDone: "false")
         let noteController = NoteController()
 
+        if self.isTextEmpty(texts: [noteTitle, noteDescription]) {
+            return
+        }
+
         if isUpdate {
             updateNote()
         } else {

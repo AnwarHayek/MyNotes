@@ -65,13 +65,12 @@ extension UpdatePasswordViewController {
 extension UpdatePasswordViewController {
 
     func updatePassword() {
-        let oldPassword = self.txtOldPassword.text ?? ""
-        let newPassword = self.txtNewPassword.text ?? ""
-        let confirmPassword = self.txtConfirmPassword.text ?? ""
+        let oldPassword = self.txtOldPassword.text
+        let newPassword = self.txtNewPassword.text
+        let confirmPassword = self.txtConfirmPassword.text
         let userController = UserController()
 
-        if oldPassword.isEmpty || newPassword.isEmpty || confirmPassword.isEmpty {
-            FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE)
+        if self.isTextEmpty(texts: [oldPassword, newPassword, confirmPassword]) {
             return
         } else if oldPassword != UserData.password {
             FailureResponse.shared.showError(message: PASSWORD_INCORRECT_MESSAGE)
@@ -80,6 +79,7 @@ extension UpdatePasswordViewController {
             FailureResponse.shared.showError(message: PASSWORDS_MATCH_TITLE)
             return
         }
+
         userController.changePassword(password: newPassword) {
             self._showAlert(title: SUCCESS_TITLE, message: PASSWORDـCHANGED_MESSAGE) {
                 self._pop()
