@@ -27,24 +27,22 @@ class UserController {
 
     // MARK: SignUp By Email
     func signUp(user: User, result: Handler) {
-        if let _email = user.email, let _password = user.password, user.firsName != "", user.lastName != "", user.phone != "" {
+        guard let _email = user.email, let _password = user.password else { return }
 
-            Helper.showLoader(isLoading: true)
-            Auth.auth().createUser(withEmail: _email, password: _password) { userResult, error in
+        Helper.showLoader(isLoading: true)
+        Auth.auth().createUser(withEmail: _email, password: _password) { userResult, error in
 
-                if let _error = error {
-                    Helper.showLoader(isLoading: false)
-                    FailureResponse.shared.showError(error: _error)
-                    return
-                }
-                user.uid = userResult?.user.uid
-                self.setUser(user: user)
-                UserData.saveUser(user: user)
-                result?()
+            if let _error = error {
+                Helper.showLoader(isLoading: false)
+                FailureResponse.shared.showError(error: _error)
+                return
             }
-            return
+            user.uid = userResult?.user.uid
+            self.setUser(user: user)
+            UserData.saveUser(user: user)
+            result?()
         }
-        FailureResponse.shared.showError(message: EMPTY_FIELDS_MESSAGE)
+        return
     }
 
     // MARK: User data Registration on Firestore

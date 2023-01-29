@@ -38,7 +38,6 @@ extension UIScrollView {
         }
     }
 
-
     // MARK: Create View
     func setupView(headerHeight: CGFloat? = nil, message: String = "", messageFont: UIFont? = nil, image: String = "") -> UIView {
 
@@ -47,14 +46,19 @@ extension UIScrollView {
         let _headerHeight = tableViewHeight * ((headerHeight ?? 1) / tableViewHeight)
 
         //_________Create Suber StackView_________
-        let suberStackView = UIStackView.init(frame: CGRect(x: 0, y: 0, width: tableViewWidth, height: tableViewHeight))
-        suberStackView.axis = NSLayoutConstraint.Axis.horizontal
-        suberStackView.alignment = UIStackView.Alignment.center
+        let superStackView = UIStackView.init(frame: CGRect(x: 0, y: 0, width: tableViewWidth, height: tableViewHeight))
+        superStackView.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        superStackView.isLayoutMarginsRelativeArrangement = true
+        superStackView.spacing = 35
+        superStackView.axis = NSLayoutConstraint.Axis.horizontal
+        superStackView.alignment = UIStackView.Alignment.center
 
         //_________Create Sub StackView_________
         let subStackView = UIStackView.init()
+        superStackView.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        superStackView.isLayoutMarginsRelativeArrangement = true
+        subStackView.spacing = 35
         subStackView.axis = NSLayoutConstraint.Axis.vertical
-        subStackView.spacing = 25
 
         //_________Create Label_________
         let label = UILabel()
@@ -64,7 +68,7 @@ extension UIScrollView {
         label.numberOfLines = 0
 
         //_________Create imageView_________
-        let imageView = UIImageView.init(frame: CGRect(x: 0, y: 0, width: 200, height: 300))
+        let imageView = UIImageView.init()
         imageView.image = image._toImage
         imageView.contentMode = UIView.ContentMode.scaleAspectFill
 
@@ -84,10 +88,10 @@ extension UIScrollView {
             return subStackView
         }
 
-        suberStackView.addArrangedSubview(subStackView)
+        superStackView.addArrangedSubview(subStackView)
         subStackView.addArrangedSubview(imageView)
         subStackView.addArrangedSubview(label)
-        return suberStackView
+        return superStackView
     }
 
     // MARK: Animation
@@ -133,5 +137,3 @@ extension UIScrollView {
         return items
     }
 }
-
-

@@ -37,8 +37,7 @@ extension GeneralTableView: UITableViewDataSource {
 
     // MARK: Cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cellIdentifier = self.cellIdentifier else { return UITableViewCell() }
-        let cell = self.dequeueReusableCell(withIdentifier: cellIdentifier) as! GeneralTableViewCell
+        guard let cellIdentifier = self.cellIdentifier, let cell = self.dequeueReusableCell(withIdentifier: cellIdentifier) as? GeneralTableViewCell else { return UITableViewCell() }
         let object = self.object[indexPath.item]
         cell.index = indexPath.item
         cell.object = object
@@ -47,7 +46,6 @@ extension GeneralTableView: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return self.object.count
     }
 

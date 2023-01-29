@@ -40,6 +40,7 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func btnSignIn(_ sender: Any) {
+        view.endEditing(true)
         self.signUp()
     }
 }

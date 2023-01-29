@@ -33,6 +33,7 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func btnSignUp(_ sender: Any) {
+        view.endEditing(true)
         self.signUp()
     }
 }
@@ -75,6 +76,10 @@ extension SignUpViewController {
         let firstName = self.txtFirstName.text
         let lastName = self.txtLastName.text
         let phone = self.txtPhone.text
+
+        if self.isTextEmpty(texts: [email, password, firstName, lastName, phone]) {
+            return
+        }
 
         let user = User.init(firsName: firstName, lastName: lastName, email: email, phone: phone, password: password)
         let userController = UserController()

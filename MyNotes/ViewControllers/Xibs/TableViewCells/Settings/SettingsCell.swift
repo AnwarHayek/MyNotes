@@ -25,6 +25,7 @@ class SettingsCell: GeneralTableViewCell {
         // Initialization code
         self.spaceBetweenCell = 10
         self.imgArrow.flipInRTL()
+        self.selectionStyle = .none
     }
 
     override func configerCell() {

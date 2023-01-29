@@ -41,6 +41,7 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func btnSave(_ sender: Any) {
+        view.endEditing(true)
         self.updateUserData()
     }
 }

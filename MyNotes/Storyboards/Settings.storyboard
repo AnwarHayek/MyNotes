@@ -92,11 +92,10 @@
                                         <rect key="frame" x="0.0" y="241.66666666666669" width="390" height="602.33333333333326"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vde-QH-lGx" customClass="GeneralTableView" customModule="MyNotes" customModuleProvider="target">
-                                                <rect key="frame" x="17" y="25.000000000000057" width="356" height="543.33333333333348"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="602.33333333333337"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </tableView>
                                         </subviews>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="25" leading="17" bottom="0.0" trailing="17"/>
                                     </stackView>
                                 </subviews>
                             </stackView>

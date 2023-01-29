@@ -59,4 +59,24 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 
+    // MARK: Check Text Filed isEmpty
+    func isTextEmpty(textFiled: [UITextField]) -> Bool {
+        for textFiled in textFiled {
+            if textFiled.getText.isEmpty {
+                self._showErrorAlert(message: EMPTY_FIELDS_MESSAGE)
+                return true
+            }
+        }
+        return false
+    }
+
+    func isTextEmpty(texts: [String]) -> Bool {
+        for text in texts {
+            if text.isEmpty {
+                self._showErrorAlert(message: EMPTY_FIELDS_MESSAGE)
+                return true
+            }
+        }
+        return false
+    }
 }

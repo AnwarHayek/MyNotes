@@ -64,9 +64,9 @@ class CustomTextFiled: UIView {
         }
     }
 
-    var text: String? {
+    var text: String {
         get {
-            return self.textFiled.text
+            return self.textFiled.getText
         }
     }
 }

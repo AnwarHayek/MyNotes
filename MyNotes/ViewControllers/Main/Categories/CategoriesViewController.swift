@@ -13,7 +13,6 @@ class CategoriesViewController: UIViewController {
 
     var categories: [Any] = []
 
-
     let categoriesController = CategoriesController()
 
     override func viewDidLoad() {
@@ -59,12 +58,12 @@ extension CategoriesViewController {
         self.categories.removeAll()
         categoriesController.getCategory { categories, showLocalData in
             self.categories = categories
-            
+
             if showLocalData {
                 let categories = TCategories.mr_findAll() as? [TCategories] ?? []
                 self.categories = categories
             }
-            
+
             self.tableView.object = self.categories
             self.tableView.reloadData()
             self.tableView.emptyDataSet(message: WRITE_FIRST_CATEGORYS_MESSAGE, image: "ic_EmptyTable")
