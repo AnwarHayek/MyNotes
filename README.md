@@ -19,5 +19,6 @@ Application for writing notes
 + MagicalRecord
 + IQKeyboardManagerSwift
 + ProgressHUD
++ Firebase
 
 
