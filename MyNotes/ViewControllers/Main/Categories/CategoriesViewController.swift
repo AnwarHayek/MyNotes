@@ -13,13 +13,20 @@ class CategoriesViewController: UIViewController {
 
     var categories: [Any] = []
 
+    let control = UIRefreshControl.init()
+
     let categoriesController = CategoriesController()
+
+    var isShowLoader: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         localized()
         setupData()
+
+//        control.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+//        self.tableView.refreshControl = control
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -54,7 +61,6 @@ extension CategoriesViewController {
     }
 
     func fetchData() {
-
         self.categories.removeAll()
         categoriesController.getCategory { categories, showLocalData in
             self.categories = categories
@@ -67,6 +73,7 @@ extension CategoriesViewController {
             self.tableView.object = self.categories
             self.tableView.reloadData()
             self.tableView.emptyDataSet(message: WRITE_FIRST_CATEGORYS_MESSAGE, image: "ic_EmptyTable")
+            self.control.endRefreshing()
         }
     }
 }

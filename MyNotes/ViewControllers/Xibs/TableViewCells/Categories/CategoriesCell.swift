@@ -57,14 +57,22 @@ class CategoriesCell: GeneralTableViewCell {
     }
 
     @IBAction func btnDelete(_ sender: Any) {
-        guard let parent = _topVC as? CategoriesViewController, let _object = self.object as? Category else { return }
-        parent.deleteCategory(category: _object)
+        guard let parent = _topVC as? CategoriesViewController else { return }
+        if let _object = self.object as? Category {
+            parent.deleteCategory(category: _object)
+        } else {
+            parent._showErrorAlert(message: INTERNET_NOT_AVAILABLE_MESSAGE)
+        }
     }
 
     @IBAction func btnEdit(_ sender: Any) {
         let vc: NewCategoryViewController = NewCategoryViewController.instantiate(appStoryboard: .Main)
         if let _object = self.object as? Category {
             vc.category = _object
+            vc.isUpdate = true
+            vc._push()
+        } else if let _object = self.object as? TCategories, let category = Category.init(category: _object) {
+            vc.category = category
             vc.isUpdate = true
             vc._push()
         }
