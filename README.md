@@ -14,6 +14,7 @@ Application for writing notes
 + Compositional Layout
 + Firebase
 + Core Data
++ Crashlytics
 
 ## Third Parties
 + MagicalRecord
