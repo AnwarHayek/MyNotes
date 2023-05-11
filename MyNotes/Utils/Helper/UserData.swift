@@ -38,74 +38,56 @@ class UserData {
         UserDefaults.standard.removeObject(forKey: USER_KEY)
     }
 
-    static var uid: String? {
-        set {
-            loadUser()?.uid = newValue
-        } get {
+    static var uid: String {
+        get {
             return loadUser()?.uid ?? ""
         }
     }
 
     static var email: String {
-        set {
-            loadUser()?.email = newValue
-        } get {
+        get {
             return loadUser()?.email ?? ""
         }
     }
 
     static var firstName: String {
-        set {
-            loadUser()?.firsName = newValue
-        } get {
+        get {
             return loadUser()?.firsName ?? ""
         }
     }
 
     static var lastName: String {
-        set {
-            loadUser()?.lastName = newValue
-        } get {
+        get {
             return loadUser()?.lastName ?? ""
         }
     }
 
     static var phone: String {
-        set {
-            loadUser()?.phone = newValue
-        } get {
+        get {
             return loadUser()?.phone ?? ""
         }
     }
 
     static var password: String {
-        set {
-            loadUser()?.password = newValue
-        } get {
+        get {
             return loadUser()?.password ?? ""
         }
     }
 
     static var categories: Int {
-        set {
-            loadUser()?.categories = newValue
-        } get {
+        get {
             return loadUser()?.categories ?? 0
         }
     }
 
     static var waitingNotes: Int {
-        set {
-            loadUser()?.waitingNotes = newValue
-        } get {
+        get {
             return loadUser()?.waitingNotes ?? 0
         }
     }
 
     static var doneNotes: Int {
-        set {
-            loadUser()?.doneNotes = newValue
-        } get {
+        get {
             return loadUser()?.doneNotes ?? 0
         }
     }

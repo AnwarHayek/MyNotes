@@ -27,7 +27,7 @@ class NotesViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.emptyDataSet(message: WRITE_FIRST_CATEGORYS_MESSAGE, image: "ic_EmptyTable")
+        self.tableView.emptyDataSet(message: WRITE_FIRST_NOTE_MESSAGE, image: "ic_EmptyTable")
     }
 
 }
@@ -101,7 +101,7 @@ extension NotesViewController: UITableViewDataSource {
                 self.noteController.deleteNote(note: self.notes[indexPath.item], category: category) {
                     self.notes.remove(at: indexPath.item)
                     self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                    self.tableView.emptyDataSet(message: WRITE_FIRST_CATEGORYS_MESSAGE, image: "ic_EmptyTable")
+                    self.tableView.emptyDataSet(message: WRITE_FIRST_NOTE_MESSAGE, image: "ic_EmptyTable")
                 }
             })
             handeler(true)

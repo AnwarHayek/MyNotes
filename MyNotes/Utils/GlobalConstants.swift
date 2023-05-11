@@ -20,8 +20,9 @@ let SYSTEM_BOLD_FONT22 = UIFont.systemFont(ofSize: 22, weight: .bold)
 let NAVY_COLOR = "#23203F"._color
 
 // MARK: - Collection names in firestore Database
-let USERS = "Users"
+let USERS = "users"
 let CATEGORIES = "Categories"
+let NOTES = "notes"
 
 // MARK: - UserDefult
 let USER_KEY = "USER"

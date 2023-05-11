@@ -83,6 +83,7 @@
 		04E4DF272943CCE7002ACAB6 /* UIButtonEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4DF262943CCE7002ACAB6 /* UIButtonEx.swift */; };
 		04E67FA02942706E00B05780 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E67F9F2942706E00B05780 /* NoteController.swift */; };
 		04F82A3C2920276500A7C907 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F82A3B2920276500A7C907 /* Quicksand-Medium.ttf */; };
+		4B6481812A0C6CFF00F98FF1 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6481802A0C6CFF00F98FF1 /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +166,7 @@
 		04E4DF262943CCE7002ACAB6 /* UIButtonEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonEx.swift; sourceTree = "<group>"; };
 		04E67F9F2942706E00B05780 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		04F82A3B2920276500A7C907 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		4B6481802A0C6CFF00F98FF1 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		6D4F5CD7EA61991841ADEBD3 /* Pods_MyNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2EFFD82138A5A8510069F1 /* Pods-MyNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotes.debug.xcconfig"; path = "Target Support Files/Pods-MyNotes/Pods-MyNotes.debug.xcconfig"; sourceTree = "<group>"; };
 		DCD4634F6E07F836CCFCD800 /* Pods-MyNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotes.release.xcconfig"; path = "Target Support Files/Pods-MyNotes/Pods-MyNotes.release.xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				04916419292D191600246DA0 /* DataBaseManager.swift */,
 				04976C46298026C7004DB60D /* EmptyDataSet.swift */,
 				048767F029815A850086635F /* AppLanguage.swift */,
+				4B6481802A0C6CFF00F98FF1 /* FirebaseManager.swift */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				0494BE07291C14F500CC25DE /* Frameworks */,
 				0494BE08291C14F500CC25DE /* Resources */,
 				09F8D5DABD57D44A5EE8249C /* [CP] Embed Pods Frameworks */,
+				4BA958162A0D2AF000C1BA25 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -667,6 +671,26 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyNotes/Pods-MyNotes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4BA958162A0D2AF000C1BA25 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n#\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
 		694CFAEFE4A152EFB0237B92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -705,6 +729,7 @@
 				04B1E050291FFD2200B9F45C /* NewCategoryViewController.swift in Sources */,
 				047E9FE6292FACF600E415BB /* FailureResponse.swift in Sources */,
 				0494BE2B291C16E400CC25DE /* MainNavigationViewController.swift in Sources */,
+				4B6481812A0C6CFF00F98FF1 /* FirebaseManager.swift in Sources */,
 				04B1E063292000FD00B9F45C /* GeneralTableViewCell.swift in Sources */,
 				04C148EF291E983400E91DC8 /* UITextFieldEx.swift in Sources */,
 				0494BE45291C1D1200CC25DE /* UIResponderEx.swift in Sources */,
@@ -919,6 +944,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5FC86J7QRY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyNotes/SupportingFiles/Info.plist;

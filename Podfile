@@ -16,5 +16,6 @@ target 'MyNotes' do
     pod 'Firebase/Firestore'
     pod 'Firebase/Storage'
     pod 'Firebase/Database'
-
+    pod 'Firebase/Crashlytics'
+    
 end

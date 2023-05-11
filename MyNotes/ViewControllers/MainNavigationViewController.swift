@@ -23,7 +23,7 @@ extension MainNavigationViewController {
         let vc1: SignInViewController = SignInViewController.instantiate(appStoryboard: .Auth)
         let vc2: CategoriesViewController = CategoriesViewController.instantiate(appStoryboard: .Main)
 
-        if UserData.uid?.isEmpty == true {
+        if UserData.uid.isEmpty == true {
             vc1._rootPush()
             return
         }

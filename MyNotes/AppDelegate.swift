@@ -8,6 +8,7 @@
 import UIKit
 import MagicalRecord
 import Firebase
+import FirebaseCrashlytics
 import IQKeyboardManagerSwift
 
 @main
@@ -26,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //IQKeyboardManager
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+
 
         FirebaseApp.configure()
         return true

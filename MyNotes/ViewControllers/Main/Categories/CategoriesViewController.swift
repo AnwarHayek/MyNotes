@@ -24,9 +24,6 @@ class CategoriesViewController: UIViewController {
         setupView()
         localized()
         setupData()
-
-//        control.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
-//        self.tableView.refreshControl = control
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +33,7 @@ class CategoriesViewController: UIViewController {
 
     @IBAction func btnNewCategory(_ sender: Any) {
         let vc: NewCategoryViewController = NewCategoryViewController.instantiate(appStoryboard: .Main)
-        vc._push()
+         vc._push()
     }
 }
 

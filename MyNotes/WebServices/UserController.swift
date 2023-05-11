@@ -9,6 +9,7 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 import MagicalRecord
+import Firebase
 
 class UserController {
 
@@ -87,15 +88,8 @@ class UserController {
     // MARK: Get User Data From Firestore
     func getUserData(uid: String?, result: ResultHandler) {
         guard let _usersFireStoreReference = self.usersFireStoreReference, let _uid = uid else { return }
-        _usersFireStoreReference.document(_uid).getDocument { userResult, error in
-
-            if let _error = error {
-                FailureResponse.shared.showError(error: _error)
-                Helper.showLoader(isLoading: false)
-                return
-            }
-
-            let user = User.init(uid: _uid, dictionary: userResult?.data())
+        _usersFireStoreReference.document(_uid).getDocument { dic in
+            let user = User.init(uid: _uid, dictionary: dic)
             Helper.showLoader(isLoading: false)
             result?(user)
         }
@@ -116,7 +110,7 @@ class UserController {
         }
     }
 
-    // MARK: Reauthenticate
+// MARK: Reauthenticate
     func reauthenticate(result: Handler) {
         guard let auth = UserData.loadUser(), let _email = auth.email, let _password = auth.password else { return }
         let credential = EmailAuthProvider.credential(withEmail: _email, password: _password)
@@ -131,7 +125,7 @@ class UserController {
         })
     }
 
-    // MARK: Change Password
+// MARK: Change Password
     func changePassword(password: String?, result: Handler) {
         guard let _password = password else { return }
         Helper.showLoader(isLoading: true)
@@ -152,17 +146,17 @@ class UserController {
         }
     }
 
-    // MARK: Edit User Data
+// MARK: Edit User Data
     func updateUserData(user: User?, handler: Handler) {
-        guard let _user = user, let _uid = UserData.uid, let _firstName = _user.firsName, let _lastName = _user.lastName, let _phone = _user.phone else { return }
+        guard let _user = user, let _firstName = _user.firsName, let _lastName = _user.lastName, let _phone = _user.phone else { return }
 
         Helper.showLoader(isLoading: true)
         self.reauthenticate {
-            self.usersFireStoreReference?.document(_uid).updateData([
+            self.usersFireStoreReference?.document(UserData.uid).updateData([
                 "firsName": _firstName,
                 "lastName": _lastName,
                 "phone": _phone
-                ]) { error in
+            ]) { error in
                 Helper.showLoader(isLoading: false)
                 if let _error = error {
                     FailureResponse.shared.showError(error: _error)
@@ -179,5 +173,6 @@ class UserController {
         }
     }
 }
+
 
 

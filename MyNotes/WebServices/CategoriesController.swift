@@ -11,14 +11,11 @@ import MagicalRecord
 
 class CategoriesController {
 
-    var ref: DatabaseReference!
+    let usersDatabaseReference = FirebaseManager.shared.usersDatabaseReference
 
     typealias Handler = (() -> Void)?
     typealias ResultHandler = ((_ categories: [Category], _ showLocalData: Bool) -> Void)?
 
-    init() {
-        self.ref = Database.database().reference()
-    }
 
     // MARK: Category data Registration on Realtime Database
     func addCategory(category: Category, result: Handler) {
@@ -28,7 +25,7 @@ class CategoriesController {
         category.uid = categoryId
         if checkInternet() {
             Helper.showLoader(isLoading: true)
-            ref.child("users").child(UserData.uid ?? "").child("Categories").child(categoryId).setValue(category.getDictionary()) { error, dataBaseReferance in
+            self.usersDatabaseReference?.child(UserData.uid).child(CATEGORIES).child(categoryId).setValue(category.getDictionary()) { error, dataBaseReferance in
                 Helper.showLoader(isLoading: false)
                 if let _error = error {
                     FailureResponse.shared.showError(error: _error)
@@ -45,7 +42,7 @@ class CategoriesController {
         if checkInternet() {
             if category.categoryName != "", category.shortDescription != "", category.uid != "" {
                 Helper.showLoader(isLoading: true)
-                ref.child("users").child(UserData.uid ?? "").child("Categories").child(category.uid ?? "").updateChildValues(category.getDictionary()) { error, dataBaseReferance in
+                self.usersDatabaseReference?.child(UserData.uid).child(CATEGORIES).child(category.uid ?? "").updateChildValues(category.getDictionary()) { error, dataBaseReferance in
                     Helper.showLoader(isLoading: false)
                     if let _error = error {
                         FailureResponse.shared.showError(error: _error)
@@ -68,7 +65,7 @@ class CategoriesController {
 
         if checkInternet() {
             Helper.showLoader(isLoading: true)
-            ref.child("users").child(UserData.uid ?? "").child("Categories").observeSingleEvent(of: .value, with: { (snapshot)in
+            self.usersDatabaseReference?.child(UserData.uid).child(CATEGORIES).observeSingleEvent(of: .value, with: { (snapshot)in
                 Helper.showLoader(isLoading: false)
 
                 for user_child in (snapshot.children) {
@@ -122,7 +119,7 @@ class CategoriesController {
         guard let _categoryUid = category.uid else { return }
         if checkInternet() {
             Helper.showLoader(isLoading: true)
-            ref.child("users").child(UserData.uid ?? "").child("Categories").child(_categoryUid).removeValue { error, _ in
+            self.usersDatabaseReference?.child(UserData.uid).child(CATEGORIES).child(_categoryUid).removeValue { error, _ in
                 Helper.showLoader(isLoading: true)
 
                 if let _error = error {
