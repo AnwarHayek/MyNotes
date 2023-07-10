@@ -16,5 +16,6 @@ class ContainerView: UIView {
         self.shadowOffset = CGSize(width: 0, height: 3)
         self.shadowOpacity = 0.16
         self.shadowRadius = 4.0
+        self.backgroundColor = .white
     }
 }

@@ -309,6 +309,7 @@
 		0494BE0C291C14F500CC25DE /* MyNotes */ = {
 			isa = PBXGroup;
 			children = (
+				4BFE3F7C2A56C4E700F9C6CD /* test */,
 				0494BE0D291C14F500CC25DE /* AppDelegate.swift */,
 				0494BE0F291C14F500CC25DE /* SceneDelegate.swift */,
 				0494BE22291C15D300CC25DE /* Storyboards */,
@@ -556,6 +557,13 @@
 				6D4F5CD7EA61991841ADEBD3 /* Pods_MyNotes.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BFE3F7C2A56C4E700F9C6CD /* test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = test;
 			sourceTree = "<group>";
 		};
 		B8BAE0A997607FB7CB944E1A /* Pods */ = {
