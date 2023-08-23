@@ -22,22 +22,8 @@ extension UITextField {
         }
     }
 
-    @IBInspectable var placeholderColor: UIColor {
-        set {
-            self.attributedPlaceholder = NSAttributedString(string: self.attributedPlaceholder?.string ?? "Text", attributes: [NSAttributedString.Key.foregroundColor: newValue])
-        }
-        get {
-            return .gray
-        }
-    }
-
-    var _placeholderFont: UIFont {
-        set {
-            self.attributedPlaceholder = NSAttributedString(string: self.attributedPlaceholder?.string ?? "Text", attributes: [NSAttributedString.Key.font: newValue])
-        }
-        get {
-            return SYSTEM_LIGHT_FONT22
-        }
+    func setAttributedPlaceholder(color: UIColor, font: UIFont) {
+        self.attributedPlaceholder = NSAttributedString(string: self.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor: color, NSAttributedString.Key.font: font])
     }
 
     var getText: String {

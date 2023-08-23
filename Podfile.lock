@@ -811,7 +811,6 @@ PODS:
     - nanopb/encode (= 2.30909.0)
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
-  - ProgressHUD (13.6)
   - PromisesObjC (2.1.1)
 
 DEPENDENCIES:
@@ -823,7 +822,6 @@ DEPENDENCIES:
   - Firebase/Storage
   - IQKeyboardManagerSwift
   - MagicalRecord
-  - ProgressHUD
 
 SPEC REPOS:
   trunk:
@@ -855,7 +853,6 @@ SPEC REPOS:
     - Libuv-gRPC
     - MagicalRecord
     - nanopb
-    - ProgressHUD
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -887,9 +884,8 @@ SPEC CHECKSUMS:
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
-  ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: 4121a266c3fd9f73a1f0907708f418e93d3ee9a7
+PODFILE CHECKSUM: 18d83f8f5107115ccd6790ca71730d1539e6b02c
 
 COCOAPODS: 1.11.3

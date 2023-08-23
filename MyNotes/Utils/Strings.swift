@@ -89,7 +89,7 @@ let PASSWORDـCHANGED_MESSAGE = "Password changed successfully"._localize
 // MARK: - General
 let ALERT_TITLE = "Alert"._localize
 let ERROR_TITLE = "Error"._localize
-let OK_TITLE = "Ok"._localize
+let OK_TITLE = "OK"._localize
 let SUCCESS_TITLE = "Success!"._localize
 let EMPTY_FIELDS_MESSAGE = "Please enter all data"._localize
 let INTERNET_NOT_AVAILABLE_MESSAGE = "Internet Connection not Available!"._localize

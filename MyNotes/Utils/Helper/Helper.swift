@@ -6,15 +6,11 @@
 //
 
 import Foundation
-import ProgressHUD
 
 class Helper {
 
-    class func showLoader(isLoading: Bool = true, progress: CGFloat? = nil) {
-        if let progress = progress, isLoading {
-            ProgressHUD.showProgress(progress)
-            return
-        }
+    class func showLoader(isLoading: Bool = true) {
+       
         if isLoading {
             ProgressHUD.showIndicator()
         } else {

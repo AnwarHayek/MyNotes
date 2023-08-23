@@ -9,20 +9,21 @@ import Foundation
 
 class UserData {
 
+    // Save the encoded data to UserDefaults
     static func saveUser(user: User?) {
         guard let user = user else { return }
-        let data = try? JSONSerialization.data(withJSONObject: user.toDictionary(), options: .fragmentsAllowed)
-        UserDefaults.standard.setValue(data, forKey: USER_KEY)
-        UserDefaults.standard.set(user.uid, forKey: ID_KEY)
-        UserDefaults.standard.synchronize()
+        let encoder = JSONEncoder()
+        if let encodedData = try? encoder.encode(user) {
+            UserDefaults.standard.set(encodedData, forKey: USER_KEY)
+        }
     }
 
+    // Decode the data into a User object
     static func loadUser() -> User? {
-        let uid = UserDefaults.standard.string(forKey: ID_KEY)
-        let data = UserDefaults.standard.value(forKey: USER_KEY) as? Data
-        if let _data = data, let _uid = uid {
-            if let dictionary = try? JSONSerialization.jsonObject(with: _data, options: .fragmentsAllowed) as? [String: Any?] {
-                return User.init(uid: _uid, dictionary: dictionary as [String: Any])
+        if let savedData = UserDefaults.standard.data(forKey: USER_KEY) {
+            let decoder = JSONDecoder()
+            if let savedPerson = try? decoder.decode(User.self, from: savedData) {
+                return savedPerson
             }
         }
         return nil

@@ -1,17 +1,16 @@
 //
 //
-//  CustomTextFiled.swift
+//  SettingsTextFiled.swift
 //  MyNotes
 //
-//  Created by Anwar Alhayek on 09/11/2022.
+//  Created by Anwar Alhayek on 15/11/2022.
 //
 
 import UIKit
 
-class CustomTextFiled: UIView {
+class SettingsTextFiled: UIView {
 
     @IBOutlet weak var contentView: UIView!
-
     @IBOutlet weak var textFiled: UITextField!
 
     override init(frame: CGRect) {
@@ -22,11 +21,10 @@ class CustomTextFiled: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureXib()
-        self.textFiled._placeholderFont = ROBOTO_LIGHT22
     }
 
     private func configureXib() {
-        Bundle.main.loadNibNamed(CustomTextFiled._id, owner: self, options: [:])
+        Bundle.main.loadNibNamed(SettingsTextFiled.id, owner: self, options: [:])
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         contentView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(contentView)
@@ -69,5 +67,5 @@ class CustomTextFiled: UIView {
             return self.textFiled.getText
         }
     }
-}
 
+}

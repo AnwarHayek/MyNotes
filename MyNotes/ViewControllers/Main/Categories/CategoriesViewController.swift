@@ -33,7 +33,7 @@ class CategoriesViewController: UIViewController {
 
     @IBAction func btnNewCategory(_ sender: Any) {
         let vc: NewCategoryViewController = NewCategoryViewController.instantiate(appStoryboard: .Main)
-         vc._push()
+        vc._push()
     }
 }
 

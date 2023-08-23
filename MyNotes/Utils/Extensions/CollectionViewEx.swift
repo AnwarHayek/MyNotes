@@ -15,7 +15,7 @@ extension UICollectionView {
     //MARK: Register
     var _registerCell: UICollectionViewCell.Type {
         set {
-            self.register(UINib.init(nibName: newValue.self._id, bundle: nil), forCellWithReuseIdentifier: newValue.self._id)
+            self.register(UINib.init(nibName: newValue.self.id, bundle: nil), forCellWithReuseIdentifier: newValue.self.id)
         }
         get {
             return UICollectionViewCell.self
@@ -24,8 +24,8 @@ extension UICollectionView {
 
     //MARK: Dequeue
     func _dequeueReusableCell<T: UICollectionViewCell>(withClass name: T.Type = T.self, for indexPath: IndexPath) -> T {
-        guard let cell = dequeueReusableCell(withReuseIdentifier: name._id, for: indexPath) as? T else {
-            fatalError("Couldn't find UICollectionViewCell for \(name._id), make sure the cell is registered with collection view")
+        guard let cell = dequeueReusableCell(withReuseIdentifier: name.id, for: indexPath) as? T else {
+            fatalError("Couldn't find UICollectionViewCell for \(name.id), make sure the cell is registered with collection view")
         }
         return cell
     }

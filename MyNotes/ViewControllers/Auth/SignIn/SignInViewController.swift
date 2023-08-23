@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class SignInViewController: UIViewController {
 
+    // MARK: Outlets
     @IBOutlet weak var lblSignIn: UILabel!
     @IBOutlet weak var lblStart: UILabel!
     @IBOutlet weak var lblDontHaveAccount: UILabel!
@@ -22,6 +23,10 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var txtPassword: CustomTextFiled!
     @IBOutlet weak var txtEmail: CustomTextFiled!
 
+    private let userController = AuthController()
+
+
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -34,23 +39,26 @@ class SignInViewController: UIViewController {
         super.viewWillAppear(animated)
     }
 
+}
+
+// MARK: - Actions
+private extension SignInViewController {
     @IBAction func btnSignUp(_ sender: Any) {
         let vc: SignUpViewController = SignUpViewController.instantiate(appStoryboard: .Auth)
         vc._push()
     }
 
     @IBAction func btnSignIn(_ sender: Any) {
-        view.endEditing(true)
-        self.signUp()
+        self.signIn()
     }
 }
 
 
-extension SignInViewController {
+// MARK: - Configurations
+private extension SignInViewController {
 
     func setupView() {
-        self.txtPassword.isSecureTextEntry = true
-        self.txtEmail.keyboardType = .emailAddress
+
     }
 
     func localized() {
@@ -58,8 +66,8 @@ extension SignInViewController {
         self.lblSignIn.text = SIGN_IN_TITLE
         self.lblDontHaveAccount.text = DONT_HAVE_ACCOUNT_TITLE
         self.btnSignUp.setTitle(SIGN_UP_TITLE, for: .normal)
-        self.txtEmail.placeholder = EMAIL_TITLE
-        self.txtPassword.placeholder = PASSWORD_TITLE
+        self.txtEmail.style = .email
+        self.txtPassword.style = .password
         self.btnSignIn.title = LOGIN_TITLE
     }
 
@@ -73,9 +81,9 @@ extension SignInViewController {
 
 }
 
-extension SignInViewController {
+private extension SignInViewController {
 
-    func signUp() {
+    func signIn() {
         let vc: CategoriesViewController = CategoriesViewController.instantiate(appStoryboard: .Main)
         let email = self.txtEmail.text
         let password = self.txtPassword.text
@@ -83,12 +91,22 @@ extension SignInViewController {
         if self.isTextEmpty(texts: [email, password]) {
             return
         }
-
-        let user = User.init(email: email, password: password)
-        let userController = UserController()
-        userController.signInByEmail(user: user) {
+        self.addIndicator()
+        self.userController.loginWithEmail(email: email, password: password) { user in
+            guard user != nil else { self.removeIndicator();return }
             vc._rootPush()
+            self.removeIndicator()
         }
+    }
+
+    func addIndicator() {
+        self.btnSignIn.addIndicator()
+        self.btnSignUp.isEnabled = false
+    }
+
+    func removeIndicator() {
+        self.btnSignIn.removeIndicator()
+        self.btnSignUp.isEnabled = true
     }
 }
 

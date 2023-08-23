@@ -41,8 +41,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
         if let _window = window {
-            let viewBackground = UIView(frame: _window.bounds)
-            viewBackground.backgroundColor = UIColor.black
+            var viewBackground = UIView(frame: _window.bounds)
+            let vc = AboutAppViewController.instantiate(appStoryboard: .Settings)
+            viewBackground = vc.view
             viewBackground.tag = 101
             _window.addSubview(viewBackground)
         }

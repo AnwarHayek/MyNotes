@@ -34,17 +34,24 @@ let TIME_FORMAT = "h:mm a"
 
 // MARK: - Enum
 enum AppStoryboard: String {
-    case Auth = "Auth"
-    case Main = "Main"
-    case Settings = "Settings"
+    case Auth
+    case Main
+    case Settings
 }
 
-// MARK: - Function
-func checkInternet() -> Bool {
+enum FCollectionReference: String {
+    case User
+}
+
+// MARK: - Functions
+func checkInternet(showAlert: Bool = true) -> Bool {
     if Reachability.isConnectedToNetwork() == false {
-        FailureResponse.shared.showError(message: INTERNET_NOT_AVAILABLE_MESSAGE)
+        Helper.showLoader(isLoading: false)
+        if showAlert == true {
+            FailureResponse.shared.showError(message: "Please check your internet connection and try again.")
+        }
         return false
     }
+    Helper.showLoader(isLoading: false)
     return true
 }
-

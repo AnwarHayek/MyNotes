@@ -35,7 +35,6 @@ class NewCategoryViewController: UIViewController {
     }
 
     @IBAction func btnSave(_ sender: Any) {
-        view.endEditing(true)
         self.action()
     }
 }
@@ -53,8 +52,11 @@ extension NewCategoryViewController {
             self.btnSave.title = SAVE_TITLE
             self.lblNewCategory.text = NEW_CATEGORY_TITLE
             self.lblCreateCategory.text = CREATE_CATEGORY_TITLE
-            self.txtCategory.placeholder = CATEGORY_NAME_TITLE
-            self.txtShortDescription.placeholder = SHORT_DESCRIPTION_TITLE
+            self.txtCategory.title = CATEGORY_NAME_TITLE
+            self.txtCategory.style = .general
+            self.txtShortDescription.title = SHORT_DESCRIPTION_TITLE
+            self.txtShortDescription.style = .general
+
         }
     }
 

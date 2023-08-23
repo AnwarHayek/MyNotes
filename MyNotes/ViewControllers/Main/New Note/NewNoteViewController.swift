@@ -55,8 +55,11 @@ extension NewNoteViewController {
             self.lblNewNote.text = NEW_NOTE_TITLE
             self.lblCreateNote.text = CREATE_NOTE_TITLE
             self.btnSave.title = SAVE_TITLE
-            self.txtDescription.placeholder = DESCRIPTION_TITLE
-            self.txtNoteTitle.placeholder = NOTE_TITLE_TITLE
+            self.txtDescription.title = DESCRIPTION_TITLE
+            self.txtDescription.style = .general
+            self.txtNoteTitle.title = NOTE_TITLE_TITLE
+            self.txtNoteTitle.style = .general
+
         }
     }
 

@@ -9,6 +9,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    // MARK: Outlets
     @IBOutlet weak var lblSignUp: UILabel!
     @IBOutlet weak var lblCreateAccount: UILabel!
 
@@ -20,6 +21,7 @@ class SignUpViewController: UIViewController {
 
     @IBOutlet weak var btnSignUp: CustomButton!
 
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -32,29 +34,37 @@ class SignUpViewController: UIViewController {
         super.viewWillAppear(animated)
     }
 
+}
+// MARK: - Actions
+private extension SignUpViewController {
+
     @IBAction func btnSignUp(_ sender: Any) {
-        view.endEditing(true)
+
         self.signUp()
     }
 }
 
-extension SignUpViewController {
+// MARK: - Configurations
+private extension SignUpViewController {
 
     func setupView() {
-        self.txtPassword.isSecureTextEntry = true
-        self.txtPhone.keyboardType = .numberPad
-        self.txtEmail.keyboardType = .emailAddress
+
+
     }
 
     func localized() {
         self.lblSignUp.text = SIGN_UP_TITLE
         self.lblCreateAccount.text = CREATE_ACCOUNT_TITLE
         self.btnSignUp.title = SIGN_UP_TITLE
-        self.txtFirstName.placeholder = FIRST_NAME_TITLE
-        self.txtLastName.placeholder = LAST_NAME_TITLE
-        self.txtPhone.placeholder = PHONE_TITLE
-        self.txtPassword.placeholder = PASSWORD_TITLE
-        self.txtEmail.placeholder = EMAIL_TITLE
+        self.txtFirstName.style = .name
+        self.txtFirstName.title = FIRST_NAME_TITLE
+
+        self.txtLastName.style = .name
+        self.txtLastName.title = LAST_NAME_TITLE
+
+        self.txtPhone.style = .phone
+        self.txtPassword.style = .password
+        self.txtEmail.style = .email
     }
 
     func setupData() {
@@ -77,14 +87,29 @@ extension SignUpViewController {
         let lastName = self.txtLastName.text
         let phone = self.txtPhone.text
 
+
         if self.isTextEmpty(texts: [email, password, firstName, lastName, phone]) {
             return
         }
 
+        self.addIndicator()
+
         let user = User.init(firsName: firstName, lastName: lastName, email: email, phone: phone, password: password)
-        let userController = UserController()
-        userController.signUp(user: user) {
+        let userController = AuthController()
+        userController.registerWithEmail(user: user) { user in
+            guard user != nil else { self.removeIndicator();return }
             vc._rootPush()
+            self.removeIndicator()
         }
+    }
+
+    func addIndicator() {
+        self.btnSignUp.addIndicator()
+        self.navigationItem.hidesBackButton = true
+    }
+
+    func removeIndicator() {
+        self.btnSignUp.removeIndicator()
+        self.navigationItem.hidesBackButton = false
     }
 }

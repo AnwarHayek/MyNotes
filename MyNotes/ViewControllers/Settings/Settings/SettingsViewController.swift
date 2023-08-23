@@ -87,7 +87,7 @@ extension SettingsViewController {
 
     func signOut() {
         let vc: SignInViewController = SignInViewController.instantiate(appStoryboard: .Auth)
-        let userController = UserController()
+        let userController = AuthController()
 
         self._showAlert(title: ALERT_TITLE, message: LOGOUT_MESSAGE, buttonAction1: {
             userController.signOut {

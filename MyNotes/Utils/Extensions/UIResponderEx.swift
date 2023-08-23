@@ -10,7 +10,7 @@ import UIKit
 
 extension UIResponder {
 
-    static var _id: String {
+    static var id: String {
         return String(describing: self)
     }
 

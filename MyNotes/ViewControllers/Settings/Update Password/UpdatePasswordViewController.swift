@@ -38,19 +38,20 @@ class UpdatePasswordViewController: UIViewController {
 extension UpdatePasswordViewController {
 
     func setupView() {
+        self.txtOldPassword.style = .password
+        self.txtOldPassword.title = OLD_PASSWORD_TITLE
+        self.txtNewPassword.style = .password
+        self.txtNewPassword.title = NEW_PASSWORD_TITLE
+        self.txtConfirmPassword.style = .password
+        self.txtConfirmPassword.title = CONFIRM_PASSWORD_TITLE
+
 
     }
-
     func localized() {
         self.lblUpdatePassword.text = UPDATE_PASSWORD_TITLE
-        self.txtNewPassword.placeholder = NEW_PASSWORD_TITLE
-        self.txtOldPassword.placeholder = OLD_PASSWORD_TITLE
-        self.txtConfirmPassword.placeholder = CONFIRM_PASSWORD_TITLE
-        self.btnSave.title = SAVE_TITLE
 
-        self.txtNewPassword.isSecureTextEntry = true
-        self.txtOldPassword.isSecureTextEntry = true
-        self.txtConfirmPassword.isSecureTextEntry = true
+        self.btnSave.title = SAVE_TITLE
+//
     }
 
     func setupData() {
@@ -68,7 +69,7 @@ extension UpdatePasswordViewController {
         let oldPassword = self.txtOldPassword.text
         let newPassword = self.txtNewPassword.text
         let confirmPassword = self.txtConfirmPassword.text
-        let userController = UserController()
+        let userController = AuthController()
 
         if self.isTextEmpty(texts: [oldPassword, newPassword, confirmPassword]) {
             return

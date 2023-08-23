@@ -97,7 +97,7 @@ extension ProfileViewController {
         let firstName = self.txtFirstName.text
         let lastName = self.txtLastName.text
         let phone = self.txtPhone.text
-        let userController = UserController()
+        let userController = AuthController()
 
         if self.isTextEmpty(texts: [firstName, lastName, phone]) {
             return

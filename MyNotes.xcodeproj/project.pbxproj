@@ -17,7 +17,6 @@
 		0448C459296034E10033FE48 /* DictionaryEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448C458296034E10033FE48 /* DictionaryEx.swift */; };
 		044AB57E296DECC500A5631C /* CGPointEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AB57D296DECC500A5631C /* CGPointEx.swift */; };
 		044EA1BE294CD06F00FF048B /* DateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA1BD294CD06F00FF048B /* DateEx.swift */; };
-		046397AD292F420F00A069F2 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046397AC292F420F00A069F2 /* UserController.swift */; };
 		046397AF292F457E00A069F2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046397AE292F457E00A069F2 /* Helper.swift */; };
 		046397B1292F464C00A069F2 /* ProgressHUDEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046397B0292F464C00A069F2 /* ProgressHUDEx.swift */; };
 		046397B3292F48D100A069F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046397B2292F48D100A069F2 /* GoogleService-Info.plist */; };
@@ -54,7 +53,6 @@
 		0494BE43291C1CD100CC25DE /* CustomTextFiled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0494BE41291C1CD100CC25DE /* CustomTextFiled.xib */; };
 		0494BE45291C1D1200CC25DE /* UIResponderEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494BE44291C1D1200CC25DE /* UIResponderEx.swift */; };
 		04976C47298026C7004DB60D /* EmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04976C46298026C7004DB60D /* EmptyDataSet.swift */; };
-		04A5FA75295F713700A1E095 /* GTCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5FA74295F713700A1E095 /* GTCodable.swift */; };
 		04AF3A69DB84012D7DBC2C21 /* Pods_MyNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4F5CD7EA61991841ADEBD3 /* Pods_MyNotes.framework */; };
 		04B1E04A291FFC7E00B9F45C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B1E049291FFC7E00B9F45C /* Main.storyboard */; };
 		04B1E04E291FFD1200B9F45C /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E04D291FFD1200B9F45C /* CategoriesViewController.swift */; };
@@ -83,7 +81,13 @@
 		04E4DF272943CCE7002ACAB6 /* UIButtonEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4DF262943CCE7002ACAB6 /* UIButtonEx.swift */; };
 		04E67FA02942706E00B05780 /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E67F9F2942706E00B05780 /* NoteController.swift */; };
 		04F82A3C2920276500A7C907 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F82A3B2920276500A7C907 /* Quicksand-Medium.ttf */; };
+		4B19F1382A938395008C94CC /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19F1372A938395008C94CC /* Progress.swift */; };
+		4B19F13B2A938B9B008C94CC /* DocumentReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19F13A2A938B9B008C94CC /* DocumentReference.swift */; };
+		4B19F13D2A938BA6008C94CC /* CollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B19F13C2A938BA6008C94CC /* CollectionReference.swift */; };
+		4B29B7672A9685E200F27600 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B29B7662A9685E200F27600 /* ProgressHUD.swift */; };
+		4B29B7692A96A78A00F27600 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B29B7682A96A78A00F27600 /* AuthController.swift */; };
 		4B6481812A0C6CFF00F98FF1 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6481802A0C6CFF00F98FF1 /* FirebaseManager.swift */; };
+		4B6880682A923C5900DAD7F0 /* CircleStrokeSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6880672A923C5900DAD7F0 /* CircleStrokeSpin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +101,6 @@
 		0448C458296034E10033FE48 /* DictionaryEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEx.swift; sourceTree = "<group>"; };
 		044AB57D296DECC500A5631C /* CGPointEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointEx.swift; sourceTree = "<group>"; };
 		044EA1BD294CD06F00FF048B /* DateEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEx.swift; sourceTree = "<group>"; };
-		046397AC292F420F00A069F2 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		046397AE292F457E00A069F2 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		046397B0292F464C00A069F2 /* ProgressHUDEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUDEx.swift; sourceTree = "<group>"; };
 		046397B2292F48D100A069F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -137,7 +140,6 @@
 		0494BE41291C1CD100CC25DE /* CustomTextFiled.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextFiled.xib; sourceTree = "<group>"; };
 		0494BE44291C1D1200CC25DE /* UIResponderEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderEx.swift; sourceTree = "<group>"; };
 		04976C46298026C7004DB60D /* EmptyDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataSet.swift; sourceTree = "<group>"; };
-		04A5FA74295F713700A1E095 /* GTCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTCodable.swift; sourceTree = "<group>"; };
 		04B1E049291FFC7E00B9F45C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04B1E04D291FFD1200B9F45C /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		04B1E04F291FFD2200B9F45C /* NewCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoryViewController.swift; sourceTree = "<group>"; };
@@ -166,7 +168,13 @@
 		04E4DF262943CCE7002ACAB6 /* UIButtonEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonEx.swift; sourceTree = "<group>"; };
 		04E67F9F2942706E00B05780 /* NoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		04F82A3B2920276500A7C907 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		4B19F1372A938395008C94CC /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		4B19F13A2A938B9B008C94CC /* DocumentReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentReference.swift; sourceTree = "<group>"; };
+		4B19F13C2A938BA6008C94CC /* CollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReference.swift; sourceTree = "<group>"; };
+		4B29B7662A9685E200F27600 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		4B29B7682A96A78A00F27600 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		4B6481802A0C6CFF00F98FF1 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		4B6880672A923C5900DAD7F0 /* CircleStrokeSpin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleStrokeSpin.swift; sourceTree = "<group>"; };
 		6D4F5CD7EA61991841ADEBD3 /* Pods_MyNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2EFFD82138A5A8510069F1 /* Pods-MyNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotes.debug.xcconfig"; path = "Target Support Files/Pods-MyNotes/Pods-MyNotes.debug.xcconfig"; sourceTree = "<group>"; };
 		DCD4634F6E07F836CCFCD800 /* Pods-MyNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotes.release.xcconfig"; path = "Target Support Files/Pods-MyNotes/Pods-MyNotes.release.xcconfig"; sourceTree = "<group>"; };
@@ -242,10 +250,10 @@
 		046397AB292F41F600A069F2 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
-				046397AC292F420F00A069F2 /* UserController.swift */,
 				047E9FE5292FACF600E415BB /* FailureResponse.swift */,
 				04801E172932B51500D015AF /* CategoriesController.swift */,
 				04E67F9F2942706E00B05780 /* NoteController.swift */,
+				4B29B7682A96A78A00F27600 /* AuthController.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -272,10 +280,11 @@
 		04916416292D18F000246DA0 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				4B29B7652A9685CA00F27600 /* ProgressHUD */,
+				4B19F1392A938B83008C94CC /* Firebase */,
 				04916419292D191600246DA0 /* DataBaseManager.swift */,
 				04976C46298026C7004DB60D /* EmptyDataSet.swift */,
 				048767F029815A850086635F /* AppLanguage.swift */,
-				4B6481802A0C6CFF00F98FF1 /* FirebaseManager.swift */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -309,10 +318,10 @@
 		0494BE0C291C14F500CC25DE /* MyNotes */ = {
 			isa = PBXGroup;
 			children = (
-				4BFE3F7C2A56C4E700F9C6CD /* test */,
 				0494BE0D291C14F500CC25DE /* AppDelegate.swift */,
 				0494BE0F291C14F500CC25DE /* SceneDelegate.swift */,
 				0494BE22291C15D300CC25DE /* Storyboards */,
+				0494BE3D291C1C9D00CC25DE /* Xibs */,
 				0494BE23291C15DB00CC25DE /* ViewControllers */,
 				0494BE24291C15E300CC25DE /* Utils */,
 				04108B4529238A94000D2876 /* Models */,
@@ -349,7 +358,6 @@
 		0494BE23291C15DB00CC25DE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0494BE3D291C1C9D00CC25DE /* Xibs */,
 				0494BE2A291C16E400CC25DE /* MainNavigationViewController.swift */,
 				04B1E04B291FFCAA00B9F45C /* Auth */,
 				04B1E04C291FFCB800B9F45C /* Main */,
@@ -387,7 +395,6 @@
 				046397B0292F464C00A069F2 /* ProgressHUDEx.swift */,
 				04E4DF262943CCE7002ACAB6 /* UIButtonEx.swift */,
 				044EA1BD294CD06F00FF048B /* DateEx.swift */,
-				04A5FA74295F713700A1E095 /* GTCodable.swift */,
 				044AB57D296DECC500A5631C /* CGPointEx.swift */,
 				0448C458296034E10033FE48 /* DictionaryEx.swift */,
 				048767E829813D250086635F /* AlertEx.swift */,
@@ -417,6 +424,8 @@
 				04B1E05F292000DB00B9F45C /* GeneralTableView */,
 				0494BE34291C1AFF00CC25DE /* CustomButton.swift */,
 				04C148EC291E8DC700E91DC8 /* ContainerView.swift */,
+				4B6880672A923C5900DAD7F0 /* CircleStrokeSpin.swift */,
+				4B19F1372A938395008C94CC /* Progress.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -559,11 +568,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4BFE3F7C2A56C4E700F9C6CD /* test */ = {
+		4B19F1392A938B83008C94CC /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				4B6481802A0C6CFF00F98FF1 /* FirebaseManager.swift */,
+				4B19F13A2A938B9B008C94CC /* DocumentReference.swift */,
+				4B19F13C2A938BA6008C94CC /* CollectionReference.swift */,
 			);
-			path = test;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		4B29B7652A9685CA00F27600 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				4B29B7662A9685E200F27600 /* ProgressHUD.swift */,
+			);
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 		B8BAE0A997607FB7CB944E1A /* Pods */ = {
@@ -728,11 +748,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046397AD292F420F00A069F2 /* UserController.swift in Sources */,
 				04B1E0672920025E00B9F45C /* CollectionViewEx.swift in Sources */,
 				044AB57E296DECC500A5631C /* CGPointEx.swift in Sources */,
 				0494BE42291C1CD100CC25DE /* CustomTextFiled.swift in Sources */,
 				04801E182932B51500D015AF /* CategoriesController.swift in Sources */,
+				4B19F1382A938395008C94CC /* Progress.swift in Sources */,
 				04D55A7F294F167B0020D329 /* AplicaionCoreData.xcdatamodeld in Sources */,
 				04B1E050291FFD2200B9F45C /* NewCategoryViewController.swift in Sources */,
 				047E9FE6292FACF600E415BB /* FailureResponse.swift in Sources */,
@@ -747,14 +767,15 @@
 				048767F129815A850086635F /* AppLanguage.swift in Sources */,
 				0494BE32291C177D00CC25DE /* SignUpViewController.swift in Sources */,
 				04B1E04E291FFD1200B9F45C /* CategoriesViewController.swift in Sources */,
-				04A5FA75295F713700A1E095 /* GTCodable.swift in Sources */,
 				0494BE37291C1B3B00CC25DE /* UIViewEx.swift in Sources */,
+				4B29B7692A96A78A00F27600 /* AuthController.swift in Sources */,
 				04919D302921991100CABE34 /* AboutAppViewController.swift in Sources */,
 				04801E1C2932B85500D015AF /* Note.swift in Sources */,
 				04801E1A2932B7F000D015AF /* Category.swift in Sources */,
 				048702532924295C004444FA /* SettingsTextFiled.swift in Sources */,
 				04976C47298026C7004DB60D /* EmptyDataSet.swift in Sources */,
 				04C148ED291E8DC700E91DC8 /* ContainerView.swift in Sources */,
+				4B19F13B2A938B9B008C94CC /* DocumentReference.swift in Sources */,
 				046397B1292F464C00A069F2 /* ProgressHUDEx.swift in Sources */,
 				04108B3F29237642000D2876 /* ProfileViewController.swift in Sources */,
 				04108B432923797D000D2876 /* SettingsCell.swift in Sources */,
@@ -764,6 +785,7 @@
 				04E67FA02942706E00B05780 /* NoteController.swift in Sources */,
 				04B90C38292D721D00D14EC1 /* NotesCell.swift in Sources */,
 				0487025629243608004444FA /* UIApplicationEx.swift in Sources */,
+				4B29B7672A9685E200F27600 /* ProgressHUD.swift in Sources */,
 				0494BE29291C167B00CC25DE /* UIViewControllerEx.swift in Sources */,
 				04C148EB291E8B7600E91DC8 /* Strings.swift in Sources */,
 				046397AF292F457E00A069F2 /* Helper.swift in Sources */,
@@ -781,9 +803,11 @@
 				047E9FE8293024DF00E415BB /* UserData.swift in Sources */,
 				04B90C30292D653E00D14EC1 /* UIImageEx.swift in Sources */,
 				04108B3C29237632000D2876 /* SettingsViewController.swift in Sources */,
+				4B6880682A923C5900DAD7F0 /* CircleStrokeSpin.swift in Sources */,
 				044EA1BE294CD06F00FF048B /* DateEx.swift in Sources */,
 				0494BE27291C162800CC25DE /* GlobalConstants.swift in Sources */,
 				0494BE39291C1BE600CC25DE /* UIColorEx.swift in Sources */,
+				4B19F13D2A938BA6008C94CC /* CollectionReference.swift in Sources */,
 				0494BE10291C14F500CC25DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -957,10 +981,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyNotes/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -990,10 +1016,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyNotes/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User: GTCodable {
+class User: Codable {
 
     var uid: String?
     var firsName: String?
